@@ -1,0 +1,25 @@
+.notice {
+  p {
+    font-size: $font-size-sm;
+    @include rem(line-height, 15);
+    color: $secondary;
+  }
+
+  a {
+    font-size: $font-size-sm;
+  }
+ 
+  span,
+  p {
+    display: inline;
+  }
+
+  span {
+    background: $primary;
+    color: $white;
+    @include rem(padding, 0, 4);
+    @include rem(margin-right, 3);
+    font-size: $font-size-ex-ex-sm;
+    font-weight: $font-bold;
+  }
+}
