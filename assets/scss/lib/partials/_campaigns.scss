@@ -16,7 +16,7 @@
   .jumbotron {
     margin: 0;
     padding: 0;
-    background-color: $blue;
+    background-color: $campaign-jumbotron;
 
     .jumbo-welcome {
       h1 {
@@ -113,7 +113,7 @@
     }
 
     .call-out-box {
-      background-color: $blue-tint;
+      background-color: $purple-tint;
     }
 
     .author {
@@ -157,7 +157,7 @@
       }
 
       &.btn-li {
-        background-color: $blue !important;
+        background-color: $purple !important;
       }
 
       &.btn-fb {
@@ -209,7 +209,7 @@
       }
 
       a {
-        color: $blue;
+        color: $purple;
       }
     }
   }

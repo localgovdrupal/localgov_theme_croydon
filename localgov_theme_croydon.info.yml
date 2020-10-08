@@ -15,6 +15,9 @@ libraries-override:
       theme:
         assets/css/font-face.css: false
         assets/css/lib/main.css: false
+    js:
+      assets/js/main.js: false
+      assets/js/bootstrap.min.js: false
 
 regions:
   header: "Header"
