@@ -91,6 +91,7 @@ $breadcrumb-bg: $white;
 $alert-bar-minor: $yellow;
 $alert-bar-major: $red;
 $alert-bar-notable: $carbon;
+$bg-carbon: $carbon;
 
 // Set all border radius to 0 by default
 $border-radius: 0;
@@ -277,3 +278,8 @@ $alert-warning: $fa-info-circle;
 //Breadcrumb divider
 $breadcrumb-divider: $fa-chevron-right;
 $breadcrumb-divider-size: 0.75rem;
+
+// Campaigns
+$campaign-header: $carbon;
+$campaign-jumbotron: #fde360;
+$section-nav-background: $indigo;
