@@ -18,13 +18,12 @@
 
 // Links used to navigate between steps
 
-ul.step-list {
+.step-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 
   li {
-    display: inline-block;
     margin-bottom: 0.5rem;
 
     &.step--prev {
@@ -56,7 +55,7 @@ ul.step-list {
 
       span {
         position: absolute;
-        @include rem (top, 11);
+        @include rem (top, 15);
       }
     }
 
@@ -180,12 +179,18 @@ ul.step-list {
           &:hover {
             color: $secondary;
           }
+        }
 
-          &.step-show {
-            font-size: $font-size-ex-sm;
-            color: $secondary;
-            text-decoration: underline;
-            font-weight: $font-normal;
+        .step-show {
+          font-size: $font-size-ex-sm;
+          color: $secondary;
+          text-decoration: underline;
+          @include rem(font-size, 16);
+          font-weight: $font-thin !important;
+          padding: 0;
+
+          &:focus { // remove default form outline attribute
+            outline: none !important; 
           }
         }
 
@@ -256,7 +261,8 @@ ul.step-list {
 
 // Modify Step by step navigation when displayed within the 'main' content area
 
-main {
+main,
+.block-views-blocklocalgov-step-by-step-navigation-steps-for-overview {
   .step-by-step-pages {
     .summaries-control {
       @include borderdirection(bottom, 1, solid, $gray);
@@ -316,14 +322,19 @@ main {
             &:hover {
               color: $black;
             }
+          }
 
-            &.step-show {
-              @include rem(font-size, 16);
-              font-weight: $font-thin !important;
+          .step-show {
+            @include rem(font-size, 16);
+            font-weight: $font-thin !important;
+            padding: 0;
 
-              @include media-breakpoint-up(sm) {
-                @include rem(font-size, 17);
-              }
+            &:focus { // remove default form outline attribute
+              outline: none !important; 
+            }
+
+            @include media-breakpoint-up(sm) {
+              @include rem(font-size, 17);
             }
           }
         }
@@ -331,6 +342,12 @@ main {
         .step__summary {
           margin: 0 0 0 3.5rem;
           padding-left: 0;
+
+          p, 
+          ol, 
+          ul {
+            font-size: 1.1875rem;
+          }
         }
       }
     }
