@@ -9,17 +9,8 @@ $blue: #0059A4;
 $orange: #FF5500;
 $green: #77BB55;
 $purple: #880088;
-// $brown
-// $magenta
 $tan: #f2ba41;
 $cyan: #17A2B8;
-// $olive
-// $maroon
-// $navy
-// $aquamarine
-// $turquoise
-// $silver
-// $lime
 $teal: #006263;
 $indigo: #540055;
 $violet: #F0E6ec;
@@ -93,15 +84,6 @@ $alert-bar-major: $red;
 $alert-bar-notable: $carbon;
 $bg-carbon: $carbon;
 
-// Set all border radius to 0 by default
-$border-radius: 0;
-$border-radius-lg: 0;
-$border-radius-sm: 0;
-
-// Font weights
-$font-bold: 700;
-$font-normal: 400;
-$font-thin: 300;
 
 // Fonts
 $font-family-base:'Source Sans Pro', Arial, Helvetica, sans-serif; // BS font variable
@@ -109,52 +91,11 @@ $font-family-sanserif:'Source Sans Pro', Arial, Helvetica, sans-serif; // BS fon
 $font-family-secondary: 'Fiendstar W01 Bold', 'Source Sans Pro', Arial, Helvetica, sans-serif;
 $font-family-icons: 'Font Awesome 5 Pro';
 $font-family-brands: 'Font Awesome 5 Brands';
-$line-height-base: 1.5;
 $headings-font-family: $font-family-secondary;
-$headings-line-height: 1.1;
-$headings-font-weight: $font-bold; // for fallbacks only
 
-// Font base size
-$font-size-base: 1rem; // Assumes the browser default, typically 16px
-// Font sizes
-$font-size-ex-ex-lg: $font-size-base * 1.375; // ~22px ~1.375rem
-$font-size-ex-lg: $font-size-base * 1.25; // ~20px ~1.25rem
-$font-size-lg: $font-size-base * 1.1875; // ~19px ~1.1875rem
-$font-size-ex-med: $font-size-base * 1.125; // ~18px ~1.125rem
-$font-size-med: $font-size-base * 1.063; // ~17px ~1.063rem
-$font-size-sm: $font-size-base * .9375; // ~15px ~.9375rem
-$font-size-ex-sm: $font-size-base * .875; // ~14px ~.875rem
-$font-size-ex-ex-sm: $font-size-base * .8125; // ~13px ~.0.8125rem
+$btn-hover-background: $indigo;
 
-// Heading sizes
-$h1-font-size: $font-size-base * 2.375; // ~38px ~2.375
-$h2-font-size: $font-size-base * 2; // ~32px ~2rem
-$h3-font-size: $font-size-base * 1.625; // ~26px ~1.625rem
-$h4-font-size: $font-size-base * 1.5; // ~24px ~1.5rem
-$h5-font-size: $font-size-ex-ex-lg; // ~22px ~1.375rem
-$h6-font-size: $font-size-ex-lg; // ~20px ~1.25rem
-
-$btn-font-weight: $font-bold; // for fallbacks only
-
-//STANDARD BUTTONS
-$input-btn-padding-y: .5rem; //8px
-$input-btn-padding-x: .9375rem; //15px
-$input-btn-font-size: 1.25rem; //20px
-$input-btn-line-height: 1.5; //10px
-
-//SMALL BUTTONS
-$input-btn-padding-y-sm: .3125rem; //5px
-$input-btn-padding-x-sm: .9375rem; //15px
-
-$input-btn-line-height-sm: 1.5; //10px
-
-//LARGE BUTTONS
-$input-btn-padding-y-lg: .75; //12px
-$input-btn-padding-x-lg: .9375rem; //15px
-$input-btn-font-size-lg: 1.375rem; //22px
-$input-btn-line-height-lg: 1.5; //10px
-
-$button-icons: $white;
+$button-icons: $yellow;
 $link-button-primary: $green;
 $link-button-primary-focus: $teal;
 $link-button-secondary: $blue;
