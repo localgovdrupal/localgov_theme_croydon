@@ -1,10 +1,10 @@
 {
-    "name": "localgovdrupal/localgov_theme",
-    "description": "Feature rich base theme for LocalGov Drupal sites.",
+    "name": "localgovdrupal/localgov_theme_croydon",
+    "description": "Feature rich child theme for the LocalGov Drupal Croydon site.",
     "type": "drupal-theme",
-    "homepage": "https://github.com/localgovdrupal/localgov_theme",
+    "homepage": "https://github.com/localgovdrupal/localgov_theme_croydon",
     "license": "GPL-2.0-or-later",
     "require": {
-        "localgovdrupal/localgov_skeleton": "dev-master"
+        "localgovdrupal/localgov_theme": "^1.0@alpha"
     }
 }
