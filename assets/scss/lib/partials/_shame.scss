@@ -1,7 +1,7 @@
 // Shame file - home for hacks, rule breakers and overrides for BS
 
-// Apply BS '.table' class to all tables. This is here because 
-// we cant yet guarantee a table added as content will have a class 
+// Apply BS '.table' class to all tables. This is here because
+// we cant yet guarantee a table added as content will have a class
 // of '.table'
 
 table {
@@ -9,9 +9,9 @@ table {
 }
 
 // The BS '.img-fluid' class alone doesnt set an image to go oversized when responding
-.img-fluid { 
+.img-fluid {
   width: 100%;
-  
+
   @include media-breakpoint-up(md) {
     max-width: 100%;
   }
@@ -30,7 +30,7 @@ table {
   }
 }
 
-// // remove left hand border on google search results causing content to indent on hover
+// remove left hand border on google search results causing content to indent on hover
 .gsc-webResult.gsc-result {
   border: none !important;
 
@@ -50,19 +50,6 @@ iframe {
   }
 }
 
-// important:: fix form.io overriding this specific pseudo in the footer
-.fa-youtube-square:before {
-  content: $fa-youtube-square !important;
-}
-
-// Accessible link background highlights - extend class really needs redoing
-.access-background { 
-  background-color: $focus;
-  color: $secondary;
-  text-decoration: none;
-  box-shadow: 0 0 0 0.125rem $focus;
-}
-
 // This is a wrapper that appears on the service status page and needs to be 100% but may be used elsewhere
 .views-element-container {
   width: 100%;
@@ -73,4 +60,4 @@ iframe {
   -webkit-transition: none;
   transition: none;
   display: none;
-} 
+}
