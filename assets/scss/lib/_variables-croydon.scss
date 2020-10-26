@@ -41,6 +41,19 @@ $gray-quaternary: $graphite;
 $gray-quinary: $stonewash;
 $gray-senary: $gray-tint;
 
+// Tints
+
+$primary-tint: lighten( $primary, 15% );
+$secondarytint: lighten( $secondary, 15% );
+$green-tint: lighten( $green, 15% );
+$blue-tint: lighten( $blue, 15% );
+$indigo-tint: lighten( $indigo, 15% );
+$purple-tint: #F8EEF8;
+$pink-tint: lighten( $pink, 15% );
+$red-tint: lighten( $red, 15% );
+$orange-tint: lighten( $orange, 15% );
+$yellow-tint: lighten( $yellow, 15% );
+
 
 $theme-colors: ( // Bootstrap colours
 'primary': $primary, 'secondary': $secondary, 'success': $success, 'info': $carbon, 'warning': $orange, 'danger': $red, 'light': $light, 'dark': $dark, // Map additional colours to 'theme colours'
