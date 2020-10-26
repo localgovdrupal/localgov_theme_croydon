@@ -1,0 +1,109 @@
+.big-bang__wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: fit-content(20%) minmax(80%, 100%);
+
+  @include media-breakpoint-up(sm) {
+    padding: 0 1rem;
+    grid-template-columns: fit-content(20%) minmax(55%, 100%) fit-content(25%);
+  }
+}
+
+.paragraph {
+  &.chosen-colour-scheme {
+    &--emergency {
+      background-color: $carbon;
+      color: $white;
+      font-weight: $font-bold;
+    }
+
+    &--borough {
+      background-color: $yellow;
+      color: $indigo;
+      font-weight: $font-bold;
+    }
+
+    &--incident {
+      background-color: $indigo;
+      color: $white;
+      font-weight: $font-bold;
+    }
+
+    &--other {
+      background-color: $indigo-tint;
+      color: $indigo;
+      font-weight: $font-bold;
+    }
+  }
+}
+
+.big-bang__logo {
+  @include rem(min-width, 60);
+}
+
+.big-bang__logo-icon {
+  font-size: 3rem;
+}
+
+.big-bang__logo-img + .big-bang__logo-icon {
+  display: none;
+}
+
+.big-bang__title-and-subtitle {
+  grid-column: 2;
+  margin-left: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.big-bang__title {
+  width: 100%;
+  font-family: $font-family-secondary;
+  font-size: $font-size-base * 2.125;
+}
+
+.big-bang__subtitle {
+  font-family: $font-family-base;
+  font-size: $font-size-base * 1.25;
+  font-weight: normal;
+}
+
+.big-bang__find-out-more {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1.5rem 1rem;
+
+  @include media-breakpoint-up(sm) {
+    grid-column: 3;
+    margin: 0;
+    justify-content: flex-end;
+  }
+
+  > a {
+    height: auto !important;
+
+    @extend .link-button;
+    @extend .btn-primary;
+
+    &:after {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .big-bang__title-and-subtitle {
+    grid-column: 2;
+  }
+
+  .big-bang__title-and-subtitle:first-child {
+    margin-left: 0;
+  }
+}
+
+.paragraph--type--big-bang-announcement {
+  @include rem(min-height, 140);
+}
