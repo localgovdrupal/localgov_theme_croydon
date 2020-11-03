@@ -1,0 +1,20 @@
+// Search icon button
+.icon-search {
+  width: $input-height;
+  height: $input-height;
+  background: $indigo;
+  color: $white;
+  font-size: $btn-font-size-sm;
+
+  &:hover {
+    background: $tertiary !important;
+
+    .fa {
+      color: $navbar-dark-toggler-border-color;
+    }
+  }
+}
+
+.container-inline .form-inline {
+  display: flex !important;
+}

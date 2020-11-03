@@ -48,6 +48,18 @@ header > p {
     white-space: nowrap;
     font-size: $font-size-base;
     margin: 0;
+
+    &:hover,
+    &:focus {
+      background-color: $focus;
+      color: $link-hover-color;
+      text-decoration: none;
+      box-shadow: 0 0 0 0.125rem $focus;
+
+      > img {
+        @include outline(.1875rem, 0, $focus);
+      }
+    }
   }
 }
 

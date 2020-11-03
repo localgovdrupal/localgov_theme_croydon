@@ -45,6 +45,11 @@ table {
   }
 }
 
+// important:: fix form.io overriding this specific pseudo in the footer
+.fa-youtube-square:before {
+  content: $fa-youtube-square !important;
+}
+
 // iframe and video class to be dealt with later on
 iframe {
   &.video {
