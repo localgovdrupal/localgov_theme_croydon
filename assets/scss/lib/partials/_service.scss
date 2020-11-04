@@ -3,11 +3,13 @@
  * This file is an override of _service.scss in localgov_theme.
  */
 
+// service pages use header links that are styled differently to those featured in main content
 .node--localgov_services_landing,
+.node--localgov_services_sublanding,
 .node--type-localgov-services-sublanding {
   .block-system-main-block {
     h2 {
-      margin-top: 0;
+      margin-top: 0 !important;
 
       a {
         color: $primary;
