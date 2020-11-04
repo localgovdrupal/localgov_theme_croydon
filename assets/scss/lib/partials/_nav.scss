@@ -1,5 +1,5 @@
 //Nav links and big tab links mobile
-.navbar-dark.nav-vanilla .nav-item,
+.navbar-dark .nav-item,
 .navbar-dark.nav-bigtabs .nav-item {
   font-family: $font-family-secondary;
   font-weight: $font-bold; // for fallbacks only
@@ -8,7 +8,7 @@
 }
 
 // Main navigation logo
-.navbar-dark.nav-vanilla .navbar-brand {
+.navbar-dark .navbar-brand {
   font-weight: $font-bold; //For fallback
   font-size: unset;
   width: 35%;
@@ -32,7 +32,7 @@
 }
 
 //Nav links mobile
-.navbar-dark.nav-vanilla .navbar-nav {
+.navbar-dark .navbar-nav {
   @include rem(margin-bottom, 20);
 
   @include media-breakpoint-up(lg) {
@@ -41,7 +41,7 @@
 }
 
 //Switch arrows
-.navbar-dark.nav-vanilla .navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link {
   padding-top: .4375rem;
   padding-bottom: .4375rem;
 
@@ -90,7 +90,7 @@
   color: $secondary !important;
 }
 // Main navigation anf and big tabs dropdown menu icon (desktop)
-.navbar-dark.nav-vanilla .nav-link .fa,
+.navbar-dark .nav-link .fa,
 .navbar-dark.nav-bigtabs .nav-link .fa {
   padding-left: 0 .3125rem;
 }
@@ -114,7 +114,7 @@
 }
 
 // Main and big tab navigation active tab
-.navbar-dark.nav-vanilla .nav-item.active,
+.navbar-dark .nav-item.active,
 .navbar-dark.nav-bigtabs .nav-item.active {
   background: $white;
   padding-left: .9375rem;
@@ -124,22 +124,22 @@
 }
 
 // Main navigation dropdown icon
-.navbar-dark.nav-vanilla .active a:hover {
+.navbar-dark .active a:hover {
   color: $indigo !important;
 }
 
 // Main navigation dropdown icon
-.navbar-dark.nav-vanilla .nav-item .fa {
+.navbar-dark .nav-item .fa {
   font-size: 85%;
 }
 
 // Prevent search button wrapping
-.navbar-dark.nav-vanilla .form-inline {
+.navbar-dark .form-inline {
   flex-flow: nowrap;
   background: none;
 }
 // Set search form padding to accomodate tab design
-.navbar-dark.nav-vanilla form {
+.navbar-dark form {
   padding: 0;
 
   @include media-breakpoint-up(lg) {
@@ -150,19 +150,19 @@
 @include media-breakpoint-up(lg) {
 
   //Set navbar link padding to accomodate tab design
-  .navbar-dark.nav-vanilla .navbar-nav .nav-link {
+  .navbar-dark .navbar-nav .nav-link {
     padding: 1rem 1.125rem;
   }
 
   // Make search form auto width (desktop)
-  .navbar-dark.nav-vanilla form .form-control {
+  .navbar-dark form .form-control {
     width: auto;
     height: $input-height;
     padding: 0 .9375rem;
   }
 }
 // Navbar search form 100% width (mobile) and custom font size
-.navbar-dark.nav-vanilla .form-inline .form-control {
+.navbar-dark .form-inline .form-control {
   width: 100%;
   border: 0;
   font-size: $font-size-ex-med;
@@ -201,17 +201,17 @@
 }
 
 // Mobile menu container
-.navbar-dark.nav-vanilla .dropdown-menu {
+.navbar-dark .dropdown-menu {
   margin: 0 0 .625rem 0; //10px;
 }
 
-.navbar-dark.nav-vanilla .dropdown-item {
+.navbar-dark .dropdown-item {
   font-size: $font-size-ex-med; //18px
   font-family: $font-family-base;
   font-weight: $font-normal; // for fallbacks only
 }
 
-.navbar-dark.nav-vanilla .dropdown-item.active {
+.navbar-dark .dropdown-item.active {
   @include rem(padding-left, 10);
   @include rem(padding-right, 10);
 }
@@ -299,7 +299,7 @@
     }
   }
 
-  &.nav-vanilla {
+  & {
     .nav-item {
       font-family: $font-family-base;
       font-weight: normal; // for fallbacks only
