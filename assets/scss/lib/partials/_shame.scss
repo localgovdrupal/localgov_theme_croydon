@@ -85,3 +85,9 @@ iframe {
 .sliding-popup-top {
   z-index: unset;
 }
+
+// drop email addresses to a new line if screen reduces
+
+main a[href^="mailto:"] {
+    word-break: break-all;
+}
