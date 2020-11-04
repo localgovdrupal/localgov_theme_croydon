@@ -12,13 +12,13 @@
       <div class="my-account d-lg-none">
         <a href="https://my.croydon.gov.uk">My Account</a><i class="fas fa-user ml-2 mr-3" aria-hidden="true"></i>
         <!-- Mobile toggle button -->
-        <button id="js-nav-toggle" class="btn navbar-toggler" type="button" aria-label="Toggle navigation">
+        <button id="js-nav-toggle" class="btn navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mobileToggle" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="fa fa-times d-none"></span>
           <span class="fa fa-bars fa-1x"></span>
         </button>
       </div>
 
-    <div class="navbar-menu collapse navbar-collapse">
+    <div class="navbar-menu navbar-collapse collapse" id="mobileToggle">
       <div class="d-lg-none">
       {{ page.search }}
       </div>
