@@ -71,3 +71,9 @@ iframe {
   transition: none;
   display: none;
 }
+
+//override formio hijack of fa and fas styling
+.fa, .fas {
+    font-family: $font-family-icons !important;
+    font-weight: 900 !important;
+}

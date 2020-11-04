@@ -1,0 +1,12 @@
+/**
+ * @file
+ * This file is an override of _service.scss in localgov_theme.
+ */
+
+.block-system-main-block {
+  .node--type-localgov-services-sublanding {
+    h2 {
+      margin-top: 0;
+    }
+  }
+}
