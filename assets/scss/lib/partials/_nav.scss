@@ -1,4 +1,4 @@
-//Nav links and big tab links mobile 
+//Nav links and big tab links mobile
 .navbar-dark.nav-vanilla .nav-item,
 .navbar-dark.nav-bigtabs .nav-item {
   font-family: $font-family-secondary;
@@ -9,16 +9,17 @@
 
 // Main navigation logo
 .navbar-dark.nav-vanilla .navbar-brand {
-  @include rem(margin-right, 18);
   font-weight: $font-bold; //For fallback
-  font-size: unset; // we have an image here and the bs font size affects the spacing
-  //display: contents; // fix for BS container size bug causing wrapping of the toggler in mobile
+  font-size: unset;
   width: 35%;
   min-width: 9.375rem;
+
+  @include rem(margin-right, 18);
 
   @include media-breakpoint-up(sm) {
     width: 25%;
   }
+
   @include media-breakpoint-up(md) {
     width: 16%;
   }
@@ -33,17 +34,17 @@
 //Nav links mobile
 .navbar-dark.nav-vanilla .navbar-nav {
   @include rem(margin-bottom, 20);
+
   @include media-breakpoint-up(lg) {
     margin-bottom: 0;
   }
 }
 
-
-//Switch arrows 
+//Switch arrows
 .navbar-dark.nav-vanilla .navbar-nav .nav-link {
   padding-top: .4375rem;
   padding-bottom: .4375rem;
- 
+
   &:focus,
   &:hover {
     color: $secondary !important;
@@ -52,16 +53,16 @@
   }
 
   .fa-chevron-down {
-    transform: rotate( -360deg );            
+    transform: rotate(-360deg);
     transition: transform 150ms ease;
   }
 
   &.show-outline {
     color: $focus;
-    
+
     .dropdown-icon {
       &.fa-chevron-down {
-        transform: rotate( -180deg );
+        transform: rotate(-180deg);
         transition: transform 150ms ease;
       }
     }
@@ -138,13 +139,14 @@
   background: none;
 }
 // Set search form padding to accomodate tab design
-.navbar-dark.nav-vanilla form { 
+.navbar-dark.nav-vanilla form {
   padding: 0;
 
   @include media-breakpoint-up(lg) {
     flex-wrap: nowrap;
   }
 }
+
 @include media-breakpoint-up(lg) {
 
   //Set navbar link padding to accomodate tab design
@@ -171,11 +173,11 @@
 #js-nav-toggle {
   padding: 0;
   background-color: transparent;
-  border: 0.063rem solid transparent;
   border-radius: 0;
+  border: 0.125rem solid $navbar-dark-toggler-border-color;
+
   @include rem(width, 38);
   @include rem(height, 38);
-  border: 0.125rem solid $navbar-dark-toggler-border-color;
 
   .fa { // Main navigation toggle button
     color: $white;
@@ -200,13 +202,13 @@
 
 // Mobile menu container
 .navbar-dark.nav-vanilla .dropdown-menu {
-  margin: 0 0 .625rem 0; //10px; 
+  margin: 0 0 .625rem 0; //10px;
 }
 
 .navbar-dark.nav-vanilla .dropdown-item {
   font-size: $font-size-ex-med; //18px
   font-family: $font-family-base;
-  font-weight: $font-normal; // for fallbacks only 
+  font-weight: $font-normal; // for fallbacks only
 }
 
 .navbar-dark.nav-vanilla .dropdown-item.active {
@@ -214,8 +216,7 @@
   @include rem(padding-right, 10);
 }
 
-
-// SIMPLE NAV 
+// SIMPLE NAV
 .simple-nav {
   margin: 0 !important;
   padding: 0;

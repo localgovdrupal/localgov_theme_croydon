@@ -73,7 +73,15 @@ iframe {
 }
 
 //override formio hijack of fa and fas styling
-.fa, .fas {
-    font-family: $font-family-icons !important;
-    font-weight: 900 !important;
+.fa,
+.fas {
+  font-family: $font-family-icons !important;
+  font-weight: 900 !important;
+}
+
+// fix issue in admin view where the cookie notice sits over the admin nav
+
+.sliding-popup-bottom,
+.sliding-popup-top {
+  z-index: unset;
 }
