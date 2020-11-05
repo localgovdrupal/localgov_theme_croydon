@@ -1,7 +1,7 @@
 {#
 /**
  * @file localgov_alert_banner.html.twig
- * Default theme implementation to present Alert banner data.
+ * Override default theme implementation to present Alert banner data with a link rather than a button for the hide option
  *
  * This template is used when viewing Alert banner pages.
  *
@@ -45,7 +45,7 @@
       {% if not remove_hide_link %}
       <div class="localgov_alert_banner--actions">
           <div class="localgov_alert_banner--dismiss">
-            <a href="#" id="closeGlobalBanner" class="js-alert-banner-close">Hide <span class="sr-only">Click here to hide this notification</span></a><i class="fas fa-times-circle" aria-hidden="true"></i>
+            <a href="#" id="closeGlobalBanner" class="js-alert-banner-close">{{ 'Hide' | t }} <span class="sr-only">{{ 'Click here to hide this notification' | t }}</span></a><i class="fas fa-times-circle" aria-hidden="true"></i>
           </div>
       </div>
       {% endif %}
