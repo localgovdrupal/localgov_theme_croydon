@@ -3,8 +3,9 @@
  * This file is an override of _nav.scss in localgov_theme.
  */
 
-//Nav links and big tab links mobile
-.navbar-dark .nav-item {
+// Nav links and big tab links mobile
+.navbar-dark .nav-item,
+.navbar-dark.nav-bigtabs .nav-item {
   font-family: $font-family-secondary;
   font-weight: $font-bold; // for fallbacks only
   white-space: nowrap;
@@ -28,10 +29,6 @@
     width: 16%;
   }
 
-  @include media-breakpoint-up(lg) {
-    width: 20%;
-  }
-
   &:hover,
   &:focus {
     background: transparent;
@@ -49,7 +46,7 @@
 }
 
 
-//Switch arrows
+// Switch arrows
 .navbar-dark .navbar-nav .nav-link {
   padding-top: .4375rem;
   padding-bottom: .4375rem;
@@ -99,7 +96,8 @@
   color: $secondary !important;
 }
 // Main navigation anf and big tabs dropdown menu icon (desktop)
-.navbar-dark .nav-link .fa {
+.navbar-dark .nav-link .fa,
+.navbar-dark.nav-bigtabs .nav-link .fa {
   padding-left: 0 .3125rem;
 }
 
@@ -156,7 +154,6 @@
 }
 
 @include media-breakpoint-up(lg) {
-
   //Set navbar link padding to accomodate tab design
   .navbar-dark .navbar-nav .nav-link {
     padding: 1rem 1.125rem;
@@ -166,7 +163,7 @@
   .navbar-dark form .form-control {
     width: auto;
     height: $input-height;
-    padding: .3125rem .9375rem;
+    padding: 0 .9375rem;
   }
 }
 // Navbar search form 100% width (mobile) and custom font size
@@ -175,12 +172,14 @@
   border: 0;
   font-size: $font-size-ex-med;
 }
+
+
 // Main navigation toggle button
 #js-nav-toggle {
   padding: 0;
   background-color: transparent;
-  border-radius: 0;
   border: 0.125rem solid $navbar-dark-toggler-border-color;
+  border-radius: 0;
 
   @include rem(width, 38);
   @include rem(height, 38);
@@ -207,21 +206,19 @@
 }
 
 // Mobile menu container
-.navbar-dark {
-  .dropdown-menu {
-    margin: 0 0 .625rem 0; //10px;
-  }
+.navbar-dark .dropdown-menu {
+  margin: 0 0 .625rem 0; //10px;
+}
 
-  .dropdown-item {
-    font-size: $font-size-ex-med; //18px
-    font-family: $font-family-base;
-    font-weight: $font-normal; // for fallbacks only
+.navbar-dark .dropdown-item {
+  font-size: $font-size-ex-med; //18px
+  font-family: $font-family-base;
+  font-weight: $font-normal; // for fallbacks only
+}
 
-    &.active {
-      @include rem(padding-left, 10);
-      @include rem(padding-right, 10);
-    }
-  }
+.navbar-dark .dropdown-item.active {
+  @include rem(padding-left, 10);
+  @include rem(padding-right, 10);
 }
 
 // SIMPLE NAV
@@ -299,10 +296,6 @@
 
 // VANILLA FOOTER NAV BOTTOM
 .navbar-light {
-  a {
-    color: $carbon;
-  }
-
   ul {
     li {
       a {
@@ -311,14 +304,14 @@
     }
   }
 
-  .nav-item {
+  &.nav-item {
     font-family: $font-family-base;
     font-weight: normal; // for fallbacks only
     white-space: nowrap;
     font-size: .9375rem;
   }
 
-  .navbar-brand {
+  &.navbar-brand {
     &:hover,
     &:focus {
       background: transparent;
@@ -326,7 +319,7 @@
     }
   }
 
-  .navbar-nav {
+  &.navbar-nav {
     padding: 0;
     margin-bottom: 0;
 
@@ -347,7 +340,7 @@
         color: $indigo !important;
       }
 
-      > .nav-link {
+      >.nav-link {
         color: $purple;
       }
     }
@@ -377,6 +370,8 @@
 }
 
 .navbar {
+  padding: 0.9375rem;
+
   @include rem(min-height, 65);
 }
 

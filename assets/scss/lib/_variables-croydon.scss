@@ -12,6 +12,7 @@ $teal: #006263;
 $indigo: #540055;
 $violet: #F0E6ec;
 $pink: #AD52AD;
+$gray: #DBDFE3;
 
 //custom
 $carbon: #121212;
@@ -166,3 +167,9 @@ $form-feedback-invalid-color: $danger;
 
 //Form input
 $input-border-color: $stonewash !important;
+
+$input-height: calc(2.875rem + 2px);
+$input-button-height: calc(2.875rem + 4px);
+
+$btn-font-size-sm: 0.9375rem;
+

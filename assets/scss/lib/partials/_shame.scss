@@ -45,6 +45,11 @@ table {
   }
 }
 
+// important:: fix form.io overriding this specific pseudo in the footer
+.fa-youtube-square:before {
+  content: $fa-youtube-square !important;
+}
+
 // iframe and video class to be dealt with later on
 iframe {
   &.video {
@@ -65,4 +70,29 @@ iframe {
   -webkit-transition: none;
   transition: none;
   display: none;
+}
+
+//override formio hijack of fa and fas styling
+.fa,
+.fas {
+  font-family: $font-family-icons !important;
+  font-weight: 900 !important;
+}
+
+// fix issue in admin view where the cookie notice sits over the admin nav
+
+.sliding-popup-bottom,
+.sliding-popup-top {
+  z-index: unset;
+}
+
+// drop email addresses to a new line if screen reduces
+
+main a[href^="mailto:"] {
+  word-break: break-all;
+}
+
+// line up search icon on directories search button
+.views-exposed-form button:after {
+  @include rem(top, 11);
 }
