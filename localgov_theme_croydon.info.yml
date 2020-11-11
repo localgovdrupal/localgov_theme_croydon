@@ -22,7 +22,6 @@ libraries-override:
 regions:
   header: "Header"
   search: "Search"
-  mobile_search: "Mobile search"
   primary_menu: "Primary menu"
   secondary_menu: "Secondary menu"
   banner: "Banner"

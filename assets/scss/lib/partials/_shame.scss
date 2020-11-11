@@ -96,3 +96,8 @@ main a[href^="mailto:"] {
 .views-exposed-form button:after {
   @include rem(top, 11);
 }
+
+// .btn remove rounded corners tmp until fix goes into base
+.btn {
+  border-radius: 0;
+}
