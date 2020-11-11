@@ -21,7 +21,7 @@
 }
 
 .form-search {
-  padding: .3125rem .9375rem;
+  padding: 0 .9375rem;
 }
 
 .form-control {
@@ -71,8 +71,10 @@
   }
 }
 
-.site-search--mobile {
-  @include media-breakpoint-up(md) {
-    display: none;
+.region-search {
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: auto;
   }
 }
