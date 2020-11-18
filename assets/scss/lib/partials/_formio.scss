@@ -543,3 +543,10 @@
     bottom: initial;
   }
 }
+
+// Remove left padding from navigation btn container 
+.formio-form-wrapper {
+  .list-inline {
+    padding-left: 0;
+  }
+}
