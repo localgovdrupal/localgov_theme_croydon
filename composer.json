@@ -5,6 +5,6 @@
     "homepage": "https://github.com/localgovdrupal/localgov_theme_croydon",
     "license": "GPL-2.0-or-later",
     "require": {
-        "localgovdrupal/localgov_theme": "^1.0@alpha"
+        "localgovdrupal/localgov_theme": "dev-master"
     }
 }
