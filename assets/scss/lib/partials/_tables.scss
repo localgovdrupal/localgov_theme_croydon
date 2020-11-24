@@ -1,10 +1,27 @@
-.table .thead-light th,
-table .thead-light th {
+.table th,
+table th {
   color: $carbon;
   background-color: $white;
   border-top: 0;
-  border-bottom: 0;
   font-size: 1.25rem;
+  vertical-align: bottom;
+
+  @include borderdirection(bottom, 1, solid, $carbon);
+}
+
+/* Table captions */
+caption {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  color: $carbon;
+  text-align: left;
+  caption-side: bottom;
+}
+
+/* Multiple table bodies */
+.table tbody + tbody,
+table tbody + tbody {
+  border-top: 0;
 }
 
 .table tr {
