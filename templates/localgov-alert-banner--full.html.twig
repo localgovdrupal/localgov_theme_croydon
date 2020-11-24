@@ -19,14 +19,6 @@
  */
 #}
 
-/**
- * @file
- * The theme system, which controls the output of Drupal.
- *
- * The theme system allows for nearly all output of the Drupal system to be
- * customized by user themes.
- */
-
 {{ attach_library('localgov_alert_banner/alert_banner') }}
 {% set has_link = content.link is not empty %}
 {% set type_of_alert =  type_of_alert|split('--')[1] %}
