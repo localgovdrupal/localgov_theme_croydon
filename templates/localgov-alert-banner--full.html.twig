@@ -30,26 +30,22 @@
     has_link ? 'localgov_alert_banner--has-link' : 'localgov_alert_banner--no-link'
   ]
 %}
+
+
 <!-- Alert Banner-->
 <div {{ attributes.addClass(classes) }} role="alert">
-  <div class="wrapper">
-    <div class="localgov_alert_banner--inner">
-      <div class="localgov_alert_banner--inner--content">
-        {% if display_title %}
-          <h2 class="localgov_alert_banner--content-heading">{{ content.title }}</h2>
-        {% endif %}
-        <div class="localgov_alert_banner--content-body">{{ content|without('link', 'title') }}</div>
-        {% if content.link %}
-          <div class="localgov_alert_banner--content-link">{{ content.link }}</div>
-        {% endif %}
+  <div class="container-fluid site-max">
+    <div class="row">
+      <div class="col-12 col-sm-10 text-left pt-3 pb-2 pb-sm-3">
+        <p>
+        {% if display_title %} {{ content.title }} {% endif %}
+        {{ content|without('link', 'title') }}
+        {% if content.link %} {{ content.link }} {% endif %}
+        </p>
       </div>
-      {% if not remove_hide_link %}
-      <div class="localgov_alert_banner--actions">
-          <div class="localgov_alert_banner--dismiss">
-            <a href="#" id="closeGlobalBanner" class="js-alert-banner-close">{{ 'Hide' | t }} <span class="sr-only">{{ 'Click here to hide this notification' | t }}</span></a><i class="fas fa-times-circle" aria-hidden="true"></i>
-          </div>
+      <div class="col-12 col-sm-2 text-right pt-0 pt-sm-3 pb-3 pl-5 text-nowrap">
+        <a href="#" id="closeGlobalBanner" class="js-alert-banner-close">{{ 'Hide' | t }} <span class="sr-only">{{ 'Click here to hide this notification' | t }}</span></a><i class="fas fa-times-circle" aria-hidden="true"></i>
       </div>
-      {% endif %}
     </div>
   </div>
 </div>
