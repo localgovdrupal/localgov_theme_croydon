@@ -102,6 +102,12 @@ main a[href^="mailto:"] {
   border-radius: 0;
 }
 
+// need to add these into buttons.scss in localgov theme
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+  box-shadow: none; // bs override
+}
+
 // add bottom margin to maps in directories
 .leaflet-container {
   border-top: 0.063rem solid $gray;

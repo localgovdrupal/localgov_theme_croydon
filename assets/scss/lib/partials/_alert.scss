@@ -4,7 +4,6 @@
 */
 
 .localgov_alert_banner {
-
   &.localgov_alert-banner--notable-person {
     background-color: $alert-bar-notable;
 
@@ -61,7 +60,6 @@
     }
 
     a {
-
       &:hover,
       &:focus {
         background: $white;

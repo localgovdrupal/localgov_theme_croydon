@@ -17,21 +17,16 @@ $gray: #DBDFE3;
 //custom
 $carbon: #121212;
 $highlight: $yellow;
-
 $graphite: #282828;
-
 $success: #338800;
 $danger: #ae1100;
-
 $light: #ededed;
 $dark: #444444;
 
 // Site colours
-
 $primary: $purple;
 $secondary: $carbon; // used to override the BS and formio colours applied as secondary
 $tertiary: $green;
-
 $visited: $secondary;
 
 // grays
@@ -43,7 +38,6 @@ $gray-quinary: $stonewash;
 $gray-senary: $gray-tint;
 
 // Tints
-
 $primary-tint: rgba( $primary, 0.2); 
 $secondarytint: rgba( $secondary, 0.2); 
 $green-tint: rgba( $green, 0.2); 
@@ -102,7 +96,7 @@ $link-button-primary-text-focus: $white;
 
 $link-button-secondary: $blue;
 $link-button-secondary-focus: $cyan;
-$link-button-secondary-text: $carbon;
+$link-button-secondary-text: $white;
 $link-button-secondary-text-focus: $white;
 
 $link-button-tertiary: $orange;
