@@ -4,6 +4,12 @@
  */
 
 // service pages use header links that are styled differently to those featured in main content
+.node--localgov_directory {
+  .sidebar {
+    margin-top: 0;
+  }
+}
+
 .node--localgov_services_landing,
 .node--localgov_services_sublanding,
 .node--type-localgov-services-sublanding,
