@@ -17,21 +17,16 @@ $gray: #DBDFE3;
 //custom
 $carbon: #121212;
 $highlight: $yellow;
-
 $graphite: #282828;
-
 $success: #338800;
 $danger: #ae1100;
-
 $light: #ededed;
 $dark: #444444;
 
 // Site colours
-
 $primary: $purple;
 $secondary: $carbon; // used to override the BS and formio colours applied as secondary
 $tertiary: $green;
-
 $visited: $secondary;
 
 // grays
@@ -43,17 +38,16 @@ $gray-quinary: $stonewash;
 $gray-senary: $gray-tint;
 
 // Tints
-
-$primary-tint: lighten( $primary, 15% );
-$secondarytint: lighten( $secondary, 15% );
-$green-tint: lighten( $green, 15% );
-$blue-tint: lighten( $blue, 15% );
-$indigo-tint: lighten( $indigo, 15% );
-$purple-tint: #F8EEF8;
-$pink-tint: lighten( $pink, 15% );
-$red-tint: lighten( $red, 15% );
-$orange-tint: lighten( $orange, 15% );
-$yellow-tint: lighten( $yellow, 15% );
+$primary-tint: rgba( $primary, 0.2); 
+$secondarytint: rgba( $secondary, 0.2); 
+$green-tint: rgba( $green, 0.2); 
+$blue-tint: rgba( $blue, 0.2); 
+$indigo-tint: rgba( $indigo, 0.2); 
+$purple-tint: rgba( $purple, 0.2); 
+$pink-tint: rgba( $pink, 0.2); 
+$red-tint: rgba( $red, 0.2); 
+$orange-tint: rgba( $orange, 0.2); 
+$yellow-tint: rgba( $yellow, 0.2);
 
 
 $theme-colors: ( // Bootstrap colours
@@ -74,7 +68,7 @@ $body-bg: $white;
 $body-color: $secondary;
 $breadcrumb-bg: $white;
 $alert-bar-minor: $yellow;
-$alert-bar-major: $red;
+$alert-bar-major: $blue;
 $alert-bar-notable: $carbon;
 
 $bg-carbon: $carbon;
@@ -102,7 +96,7 @@ $link-button-primary-text-focus: $white;
 
 $link-button-secondary: $blue;
 $link-button-secondary-focus: $cyan;
-$link-button-secondary-text: $carbon;
+$link-button-secondary-text: $white;
 $link-button-secondary-text-focus: $white;
 
 $link-button-tertiary: $orange;
@@ -172,4 +166,6 @@ $input-height: calc(2.875rem + 2px);
 $input-button-height: calc(2.875rem + 4px);
 
 $btn-font-size-sm: 0.9375rem;
+
+$checkbox-outline: #EEEEEE;
 

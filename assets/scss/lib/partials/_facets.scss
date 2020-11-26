@@ -1,0 +1,16 @@
+/**
+ * @file
+ * This file is an override of _facets.scss in localgov_theme.
+ */
+
+.facet-filter-checkboxes {
+  li {
+    border-bottom: 0;
+  }
+
+  label {
+    &:before {
+      border: .063rem solid $checkbox-outline;
+    }
+  }
+}

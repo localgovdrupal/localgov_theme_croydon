@@ -1,0 +1,70 @@
+/**
+* @file
+* This file is an override of _alert.scss in localgov_theme.
+*/
+
+.localgov_alert_banner {
+  &.localgov_alert-banner--notable-person {
+    background-color: $alert-bar-notable;
+
+    p,
+    a,
+    i {
+      color: $white;
+    }
+  }
+
+  &.localgov_alert-banner--major {
+    background-color: $alert-bar-major;
+
+    p,
+    a,
+    i {
+      color: $white;
+    }
+  }
+
+  &.localgov_alert-banner--minor {
+    background: $alert-bar-minor;
+  }
+
+  div > div {
+    > div {
+      p {
+        position: relative;
+        display: inline-block;
+
+        &:first-child {
+          @include rem(padding-left, 40);
+          @include rem(padding-right, 10);
+
+          &:before {
+            position: absolute;
+            left: 0;
+            font-size: $h2-font-size;
+            font-family: $font-family-icons;
+            font-weight: $fa-font-weight; // some font awesome icons require a specific font weight
+            content: $fa-exclaim;
+            margin: 0;
+            padding: 0;
+
+            @include rem(top, -11);
+          }
+        }
+      }
+    }
+
+    > p {
+      margin: 0;
+      font-size: $font-size-med;
+    }
+
+    a {
+      &:hover,
+      &:focus {
+        background: $white;
+        color: $secondary;
+      }
+    }
+  }
+}

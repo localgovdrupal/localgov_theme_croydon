@@ -78,10 +78,12 @@
 @import '../../../../localgov_theme/assets/scss/lib/partials/tables';
 
 // Import local partials
+@import 'partials/alert';
 @import 'partials/banners';
 @import 'partials/bigbang';
 @import 'partials/contact';
 @import 'partials/design-system';
+@import 'partials/facets';
 @import 'partials/feedback';
 @import 'partials/formio';
 @import 'partials/google-search';
