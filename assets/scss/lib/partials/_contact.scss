@@ -1,4 +1,4 @@
-.paragraph--type--contact {
+.paragraph--type--localgov-contact {
   background: $gray;
   border-left: 0.3125rem solid $primary;
 
@@ -10,7 +10,7 @@
   }
 
   .contact-opentimes {
-    #field--field_para_contact_office_hours {
+    #field--localgov_contact_office_hours {
       > div {
         &:first-child {
           font-size: $h6-font-size;
@@ -55,31 +55,31 @@
       }
     }
 
-    #field--field_para_contact_email {
+    #field--localgov_contact_email {
       &:before {
         content: $fa-envelope;
       }
     }
 
-    #field--field_para_contact_phone {
+    #field--localgov_contact_phone {
       &:before {
         content: $fa-phone;
       }
     }
 
-    #field--field_para_contact_mobile {
+    #field--localgov_contact_mobile {
       &:before {
         content: $fa-mobile;
       }
     }
 
-    #field--field_para_contact_out_of_hours {
+    #field--localgov_contact_out_of_hours {
       &:before {
         content: $fa-moon;
       }
     }
 
-    #field--field_para_contact_minicom {
+    #field--localgov_contact_minicom {
       &:before {
         content: $fa-keyboard;
       }
@@ -187,7 +187,7 @@
       }
     }
 
-    #field--field_para_contact_other_url {
+    #field--localgov_contact_other_url {
       @include rem(margin-left, 20);
     }
   }
