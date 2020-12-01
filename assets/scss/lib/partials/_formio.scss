@@ -10,6 +10,17 @@
   margin-bottom: 0;
 }
 
+#formio {
+  > h2 {
+    font-size: $h2-font-size !important;
+
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-base * 2.125 !important;
+    }
+  }
+}
+
+
 // FormIO labels margin fix 
 .formio-form-wrapper .form-group > label {
   margin-top: 0;
@@ -26,7 +37,8 @@
 //CARDS
 //Remove the white background from card body
 .formio-form-wrapper .card-body {
-  padding: 0;
+  padding: 1rem;
+  margin: 1rem 0;
   background: none;
   border: 0;
 }
@@ -167,10 +179,6 @@
 }
 
 // CARDS
-// Remove padding
-.formio-form-wrapper .card-body {
-  padding: 0;
-}
 
 // FIELDSETS
 // Reset text size of label in fieldset
@@ -191,6 +199,10 @@
 // Text muted colour
 .formio-form-wrapper .text-muted {
   color: $gray-dark !important;
+}
+
+.form-radio {
+  margin-top: 1rem;
 }
 
 // DROP SELECT

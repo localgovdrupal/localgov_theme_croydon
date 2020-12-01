@@ -49,6 +49,7 @@
 
 // Feedback bar above footer - form container
 .feedback-form-page {
+
   color: $carbon;
 
   // Main text sizes
@@ -93,5 +94,15 @@
     padding: 0.5rem 1rem;
     color: $danger !important;
     font-size: 1.1875rem;
+  }
+}
+
+#block-feedbackform {
+  &.bg-primary {
+    background-color: $white !important;
+  }
+
+  .feedback-trigger-page {
+    background-color: $primary;
   }
 }
