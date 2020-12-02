@@ -6,31 +6,31 @@
  */
 
 /**
- * Implements hook_preprocess_node() for hook_preprocess_node__localgov_guides_overview().
+ * Implements hook_preprocess_page() for hook_preprocess_page__localgov_guides_overview().
  *
- * - Occupies 8 out of 12 columns in wider displays.
+ * - Content region always occupies 8 out of 12 columns in wider displays.
  */
-function localgov_theme_croydon_preprocess_node__localgov_guides_overview(&$variables) {
+function localgov_theme_croydon_preprocess_page__localgov_guides_overview(&$variables) {
 
-  $variables['attributes']['class'][] = 'col-md-8';
+  $variables['has_sidebar_second'] = TRUE;
 }
 
 /**
- * Implements hook_preprocess_node() for hook_preprocess_node__localgov_guides_page().
+ * Implements hook_preprocess_page() for hook_preprocess_page__localgov_guides_page().
  *
- * - Occupies 8 out of 12 columns in wider displays.
+ * - Content region always occupies 8 out of 12 columns in wider displays.
  */
-function localgov_theme_croydon_preprocess_node__localgov_guides_page(&$variables) {
+function localgov_theme_croydon_preprocess_page__localgov_guides_page(&$variables) {
 
-  $variables['attributes']['class'][] = 'col-md-8';
+  $variables['has_sidebar_second'] = TRUE;
 }
 
 /**
- * Implements hook_preprocess_node() for hook_preprocess_node__localgov_services_page().
+ * Implements hook_preprocess_page() for hook_preprocess_page__localgov_services_page().
  *
- * - Occupies 8 out of 12 columns in wider displays.
+ * - Content region always occupies 8 out of 12 columns in wider displays.
  */
-function localgov_theme_croydon_preprocess_node__localgov_services_page(&$variables) {
+function localgov_theme_croydon_preprocess_page__localgov_services_page(&$variables) {
 
-  $variables['attributes']['class'][] = 'col-md-8';
+  $variables['has_sidebar_second'] = TRUE;
 }
