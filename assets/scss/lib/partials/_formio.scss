@@ -36,11 +36,17 @@
 
 //CARDS
 //Remove the white background from card body
-.formio-form-wrapper .card-body {
-  padding: 1rem;
-  margin: 1rem 0;
-  background: none;
-  border: 0;
+.formio-form-wrapper {
+  .card-body {
+    padding: 1rem;
+    margin: 1rem 0;
+    background: none;
+    border: 0;
+  }
+  .card,
+  .border {
+    border: 0 !important; // remove grey outline around formio forms
+  }
 }
 
 // Remove conflicting margin bottom in theme from form controls
