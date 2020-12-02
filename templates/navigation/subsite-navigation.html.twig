@@ -26,15 +26,36 @@
   We call a macro which calls itself to render the full tree.
   @see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
+
+<nav class="section-nav" aria-label="Section Navigation">
 {{ subsite_navigation.menu_links(items, attributes, 0) }}
 
 {% macro menu_links(items, attributes, menu_level) %}
+
   {% import _self as subsite_navigation %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('menu') }}>
+    {% for item in items %}
+    <h3 class="p-4">
+      <span class="float-left col-8 col-md-12 pl-0">
+        {{ item.title }}
+      </span> 
+      <!--Show hide toggle link -->
+      <span class="float-left d-md-none">
+        <a href="#" data-toggle='collapse' data-target="#sectionLinks" class="reveal collapsed">
+          <span id='view_sectionLinks' class='collapse in'><strong>Menu</strong><i class="fas fa-chevron-down pl-2"></i></span>
+          <span id='hide_sectionLinks' class='collapse out'><strong>Menu</strong><i class="fas fa-chevron-up pl-2"></i></span>
+        </a>
+      </span>
+    </h3>
+    {% endfor %}
+
+    <ul{{ attributes.addClass('menu', 'p-0', 'collapse', 'dont-collapse-sm', 'out') }} id="sectionLinks">
+
     {% else %}
-      <ul class="menu">
+
+    <ul class="menu pr-0">
+     
     {% endif %}
     {% for item in items %}
       {%
@@ -45,13 +66,17 @@
           item.in_active_trail ? 'menu-item--active-trail',
         ]
       %}
-      <li{{ item.attributes.addClass(classes) }}>
+
+      <li{{ item.attributes.addClass(classes, 'p-0') }}>
+        <span class="{{ link.class }}">
         {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ subsite_navigation.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
+        </span>
       </li>
     {% endfor %}
     </ul>
   {% endif %}
 {% endmacro %}
+</nav>
