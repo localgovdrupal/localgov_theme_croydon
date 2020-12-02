@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation for a field.
+ * Template for primary banner image field.
  *
  * To override output, copy the "field.html.twig" from the templates directory
  * to your theme's directory and customize it, just like customizing other
@@ -44,13 +44,8 @@
   ]
 %}
 
-
-
-    {% for item in items %}
-
-    <div class=" col-12 col-md-4 p-4 order-1 order-sm-2">
-       {{ item.content }}
-    </div>
-      
-  {% endfor %}
- 
+{% for item in items %}
+  <div class=" col-12 col-md-4 p-4 order-1 order-sm-2">
+    {{ item.content }}
+  </div>
+{% endfor %}

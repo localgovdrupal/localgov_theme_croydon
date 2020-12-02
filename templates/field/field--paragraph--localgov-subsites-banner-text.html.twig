@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation for a field.
+ * Template for primary banner subtitle field
  *
  * To override output, copy the "field.html.twig" from the templates directory
  * to your theme's directory and customize it, just like customizing other
@@ -44,12 +44,8 @@
   ]
 %}
 
-
-
-    {% for item in items %}
-    <div class="d-none">
-      {{ item.content }}
-    </div>
-      
-  {% endfor %}
- 
+{% for item in items %}
+  <div class="d-none">
+    {{ item.content }}
+  </div>
+{% endfor %}
