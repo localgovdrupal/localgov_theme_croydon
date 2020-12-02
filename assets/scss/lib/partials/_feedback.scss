@@ -95,3 +95,13 @@
     font-size: 1.1875rem;
   }
 }
+
+#block-feedbackform {
+  &.bg-primary {
+    background-color: $white !important;
+  }
+
+  .feedback-trigger-page {
+    background-color: $primary;
+  }
+}
