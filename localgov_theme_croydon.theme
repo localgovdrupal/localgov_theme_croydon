@@ -26,6 +26,16 @@ function localgov_theme_croydon_preprocess_page__localgov_guides_page(&$variable
 }
 
 /**
+ * Implements hook_preprocess_page() for hook_preprocess_page__localgov_step_by_step_overview().
+ *
+ * - Content region always occupies 8 out of 12 columns in wider displays.
+ */
+function localgov_theme_croydon_preprocess_page__localgov_step_by_step_overview(&$variables) {
+
+  $variables['has_sidebar_second'] = TRUE;
+}
+
+/**
  * Implements hook_preprocess_page() for hook_preprocess_page__localgov_services_page().
  *
  * - Content region always occupies 8 out of 12 columns in wider displays.
