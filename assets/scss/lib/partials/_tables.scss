@@ -3,8 +3,8 @@
  * This file is an override of _tables.scss in localgov_theme.
  */
 
-.table th,
-table th {
+.table thead th,
+table thead th {
   color: $carbon;
   background-color: $white;
   border-top: 0;
