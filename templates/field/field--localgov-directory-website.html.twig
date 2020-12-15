@@ -53,7 +53,7 @@
 {% else %}
   <div{{ attributes }}>
   
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    <div{{ title_attributes.addClass(title_classes, 'd-none') }}>{{ label }}</div>
     <span class="fas fa-link" aria-hidden="true"></span>
     {% for item in items %}
       {{ item.content }}
