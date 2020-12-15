@@ -25,6 +25,7 @@
 .view-localgov-directory-channel { // hide unwanted chevron
   .link-block {
     border-bottom: 0.0625rem solid $gray;
+
     @include rem(margin-bottom, 20);
 
     .fa {
