@@ -111,10 +111,9 @@ main a[href^="mailto:"],
 
 // add bottom margin to maps in directories
 .leaflet-container {
-  border-top: 0.063rem solid $gray;
+  margin-bottom: 0;
 
-  @include rem(margin-bottom, 40);
-  @include rem(margin-top, 12);
+  @include rem(margin-top, 30);
 }
 
 // temp remove related links sidebar on step by step overview - remove this when a perm solution is found
@@ -122,4 +121,9 @@ main a[href^="mailto:"],
   .sidebar {
     display: none;
   }
+}
+
+// needs to be factored back into localgov theme - links.scss - the breakpoint was changed from sm to md
+main.col-md-8 a {
+  font-weight: $font-normal !important; // remove bold for main copy links
 }
