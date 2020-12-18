@@ -24,13 +24,17 @@
   }
 }
 
-.view-localgov-directory-channel { // hide unwanted chevron
+.view-localgov-directory-channel { 
+  .leaflet-container {
+    margin-bottom: 2rem;
+  }
+
   .link-block {
     border-bottom: 0.0625rem solid $gray;
 
     @include rem(margin-bottom, 20);
 
-    .fa {
+    .fa { // hide unwanted chevron
       display: none !important;
     }
   }
@@ -50,7 +54,8 @@
       position: absolute;
       font-size: $font-size-lg;
       font-weight: $fa-font-weight; // some font awesome icons require a specific font weight
-      content: '';
+      font-family: $font-family-icons;
+      content: $fa-link;
       margin: 0;
       padding: 0;
       color: $carbon;
