@@ -1,0 +1,240 @@
+.homepage {
+  .layout--onecol {
+    .row {
+      margin: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .block-localgov-subsite-banner { //tmp remove when these are  permanently gone
+    display: none;
+  }
+
+  .box-links-listing--boxes {
+    width: 100%;
+    margin: 0;
+
+    .box-links-listing__list {
+      padding: 0;
+      margin: 0;
+
+      @extend .row;
+
+      &-item {
+        position: relative;
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+
+        @include rem(margin-bottom, 30);
+
+        @include media-breakpoint-up(md) {
+          position: relative;
+          width: 25%;
+          flex: 0 0 25%;
+          max-width: 25%;
+
+          @include rem(padding, 0, 15);
+        }
+
+        .box-link {
+          background: $gray-tint;
+          border-bottom: 0.3rem solid $primary;
+          height: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 1rem;
+
+          @include rem(min-height, 100);
+
+          a {
+            display: block;
+            width: auto;
+            text-decoration: none;
+            background: transparent;
+            box-shadow: none;
+            word-break: break-word;
+            font-weight: $font-normal;
+            font-size: $font-size-ex-ex-lg;
+
+            &:hover,
+            &:focus {
+              background-color: $focus;
+            }
+
+            span {
+              margin-top: 0;
+              padding-left: 0;
+
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .social-media-subscription-panel__text {
+    font-size: $font-size-ex-med;
+  }
+
+  .services--list-block {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      word-break: break-word;
+    }
+
+    h2 {
+      a {
+        color: $carbon;
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
+          color: $carbon;
+          text-decoration: none;
+        }
+      }
+    }
+
+    ul {
+      li {
+        a {
+          color: $purple;
+          text-decoration: underline;
+          font-weight: normal;
+
+          &:hover,
+          &:focus {
+            color: $carbon;
+          }
+        }
+      }
+    }
+  }
+
+  .news-list {
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: .0625rem solid $gray;
+
+    @include rem(margin-bottom, 40);
+    @include rem(padding-bottom, 20);
+
+    .news-date {
+      font-size: $font-size-sm;
+      margin-bottom: 0;
+    }
+
+    a {
+      word-break: break-word;
+      color: $purple;
+      display: block;
+      text-decoration: underline;
+      margin-bottom: 1rem;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $carbon;
+      }
+    }
+  }
+
+  .paragraph--type--page-section {
+    @include rem(margin, 0, 30);
+
+    .layout--twocol {
+      .layout__region--first {
+        @include rem(padding-right, 15);
+      }
+
+      .layout__region--bottom {
+        .box-link {
+          a {
+            width: auto;
+            margin-left: 1rem;
+            font-size: $font-size-lg;
+            text-decoration: underline !important;
+
+            &:hover,
+            &:focus {
+              text-decoration: underline;
+            }
+
+            span {
+              margin-top: 0;
+
+              &:before {
+                top: 0.3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .paragraph--type--localgov-subscribe-panel {
+    @include rem(margin, 20, 0);
+    @include rem(padding, 20);
+  }
+
+  .services--feature-block {
+    padding-left: 0;
+    padding-right: 0;
+
+    .services--feature-icon {
+      width: inherit;
+      height: inherit;
+      font-size: $h2-font-size;
+    }
+  }
+
+  .featured-subsite__title {
+    @include rem(margin, 20, 0);
+
+    a {
+      font-size: $h2-font-size;
+      word-break: break-word;
+      line-height: 2rem;
+      color: $carbon;
+    }
+  }
+
+  .featured-subsite__summary {
+    font-size: $font-size-ex-med;
+  }
+
+  .email-subscription-panel__form {
+    label {
+      width: 100%;
+      font-size: $h3-font-size;
+      justify-content: left;
+      font-family: $font-family-secondary;
+    }
+
+    input {
+      margin-bottom: 0;
+    }
+
+    .btn {
+      margin: 0;
+    }
+  }
+}
+
+.jumbotron {
+  &.home-1 {
+    .form-control {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
