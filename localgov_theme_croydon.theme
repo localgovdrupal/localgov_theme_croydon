@@ -44,3 +44,25 @@ function localgov_theme_croydon_preprocess_page__localgov_services_page(&$variab
 
   $variables['has_sidebar_second'] = TRUE;
 }
+
+/**
+ * Implements hook_preprocess_file_link().
+ *
+ * Changes:
+ * - Inserts file *type* into the theme variable.
+ * - Reformats file size.  Example: 123KB.
+ *
+ * @see template_preprocess_file_link()
+ */
+function localgov_theme_croydon_preprocess_file_link(&$variables) {
+
+  $file = $variables['file'];
+  $mime_type = $file->getMimeType();
+  $variables['file_type'] = explode('/', $mime_type)[1] ?? '-';
+
+  // 123.45 KB -> 123KB
+  $variables['file_size'] = preg_replace([
+    '/ /',
+    '/\.\d+/',
+  ], '', $variables['file_size']);
+}
