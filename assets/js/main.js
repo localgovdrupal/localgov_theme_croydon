@@ -9,8 +9,9 @@
     var homeSearchInput = document.querySelector('#home-site-search input');
 
     var homeSearchButton = document.querySelector('#home-site-search button');
-    var homeExpandServicesLink = document.querySelector('#services--expand-link');
-    var homeExpandServicesContainer = document.querySelector('#services--expand-container');
+    //var homeExpandServicesLink = document.querySelector('#services--expand-link');
+    //var homeExpandServicesContainer = document.querySelector('#services--expand-container');
+    var homeExists = document.querySelector('.homepage');
     var newsroomSearch = document.querySelector('#newsroom--search');
     var newsroomSearchToggle = document.querySelector('#newsroom--search-toggle');
     var directorySearch = document.querySelector('#directories-search-form');
@@ -153,43 +154,23 @@
       });
     }
 
-    /* Homepage expand services */
-    if (homeExpandServicesLink) {
-      $(function () {
-        $(homeExpandServicesLink).click(function () {
-          if ($(this).hasClass('show')) {
+    /* Homepage only - services list show hide */
+    if (homeExists) {
 
-            // replace the icon
-            $(this).find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
-            var $i = $(this).find('i');
-            // replace the text
-            $(this).text('Show fewer services');
-            $(this).prepend($i);
-            $(this).removeClass('show');
-            $(homeExpandServicesContainer).addClass('flex-reveal');
+    var $servicesBlock = $(".layout--threecol-33-34-33"); // Note: this selector needs to be changed to a more specific class when available
+    
+    $servicesBlock.slice(2).hide();
 
-          }
-          else {
-            // replace the icon
-            $(this).find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
-            var $i = $(this).find('i');
-            // replace the text
-            $(this).text('Show more services');
-            $(this).prepend($i);
-            $(this).addClass('show');
-            $(homeExpandServicesContainer).removeClass('flex-reveal');
-          }
-        });
-    $(homeExpandServicesLink).keyup(function(e) {
-      var code = e.keyCode || e.which;
-      if (code == '13') {
-        if (!$(homeExpandServicesLink).hasClass('show')) {
-        $( '#services--expand-container .services--list-block:first h3 a').focus();
-      }
-      }
+    $('.services-show').on('click', function(e) {
+      $(this).removeClass("d-flex").addClass("d-none"); // work around for BS4 d-flex using !important and overriding usual hide method
+      $servicesBlock.show();
+      e.preventDefault();
     });
 
-      });
+    $('.services-hide').on('click', function(e) {
+      $servicesBlock.slice(2).hide();
+      $('.services-show').removeClass("d-none").addClass("d-flex"); // work around for BS4 d-flex using !important and overriding usual hide method
+    });
     }
 
     /* newsroom search */
