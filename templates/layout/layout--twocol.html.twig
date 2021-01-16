@@ -17,7 +17,7 @@
 {% if content %}
   <div{{ attributes.addClass(classes, 'row') }}>
     {% if content.top %}
-      <div {{ region_attributes.top.addClass('layout__region', 'layout__region--top') }}>
+      <div {{ region_attributes.top.addClass('layout__region', 'layout__region--top', 'col') }}>
         {{ content.top }}
       </div>
     {% endif %}
@@ -35,7 +35,7 @@
     {% endif %}
 
     {% if content.bottom %}
-      <div {{ region_attributes.bottom.addClass('layout__region', 'layout__region--bottom') }}>
+      <div {{ region_attributes.bottom.addClass('layout__region', 'layout__region--bottom', 'col') }}>
         {{ content.bottom }}
       </div>
     {% endif %}
