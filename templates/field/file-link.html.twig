@@ -25,8 +25,10 @@
 <span{{ attributes }}>
   {{ link }}
 
-  <span class="file-meta">(
+  <span class="file-meta">
+    {{- '(' -}}
     <span class="file-type">{{ file_type|upper }}</span>,
-    <span class="file-size">{{ file_size }})</span>
+    <span class="file-size">{{ file_size }}</span>
+    {{- ')' -}}
   </span>
 </span>
