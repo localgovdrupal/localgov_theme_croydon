@@ -80,36 +80,6 @@
   {% endif %}
 {% endblock %}
 
-<div class="jumbotron jumbotron-fluid banner-full home-1">
-  <!--Full width jumbotron-->
-  <div class="banner-full-tint h-100">
-    <!--Tint placed over banner image-->
-    <div class="container-fluid site-max h-100">
-      <!--Container fluid and site max, set to height 100% of jumbotron container-->
-      <div class="row align-items-center h-100">
-        <!--Layout row set to 100% height of container-->
-        <div class="col-12">
-          <!--Column layout with contents centered horizontally-->
-          <h1 class="text-center mb-3 px-5">Welcome to Croydon</h1>
-          <!--H1 with margin bottom added, and padding right removed-->
-          <form class="form-inline justify-content-center mb-4">
-            <!--Form wrapper with margin bottom-->
-            <input class="form-control col-sm-6 col-10" type="search" placeholder="Search croydon.gov.uk" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search croydon.gov.uk'" aria-label="Search">
-            <!--Search field with responsive column settings, and placeholder settings-->
-            <button class="btn btn-primary col-2 d-flex justify-content-between align-items-center" type="submit"><span class="d-none d-md-flex">Search</span><span class="fas fa-search d-flex" aria-label="Submit search"></span></button>
-            <!--Button with column setting and custom CSS for icon only on mobile-->
-          </form>
-          <!--Form wrapper END-->
-        </div>
-        <!--Column layout END-->
-      </div>
-      <!--Layout row END -->
-    </div>
-    <!--Container fluid END-->
-  </div>
-  <!--Tint placed over banner image END-->
-</div>
-
 {% block sitewide_alert %}
  {{ sitewide_alert }}
 {% endblock%}

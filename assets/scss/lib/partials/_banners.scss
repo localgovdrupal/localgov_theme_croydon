@@ -1,20 +1,11 @@
-/* Set the banner image for homepage banner - image path is inline */
-.home-1 {
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* Set the banner image for campaign style 1 */
-.campaign-1 {
-  background: url(img/banner-campaign-1.jpg) center center no-repeat;
-  background-size: cover;
-}
-
-/* Set the banner image for campaign style 2 */
-.campaign-2 {
-  background: url(img/banner-campaign-2.jpg) center center no-repeat;
-  background-size: cover;
+.node--localgov_subsites_overview {
+  .jumbotron {
+    &.banner-full {
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .banner-full-tint {
