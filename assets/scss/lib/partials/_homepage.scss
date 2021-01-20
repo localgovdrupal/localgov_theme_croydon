@@ -15,10 +15,14 @@
     margin: 0;
 
     .box-links-listing__list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: auto;
+      align-content: space-around;
       padding: 0;
       margin: 0;
-
-      @extend .row;
 
       &-item {
         position: relative;
@@ -27,15 +31,13 @@
         max-width: 100%;
         padding: 0;
 
-        @include rem(margin-bottom, 30);
+        @include rem(margin-bottom, 25);
 
         @include media-breakpoint-up(md) {
           position: relative;
-          width: 25%;
-          flex: 0 0 25%;
-          max-width: 25%;
-
-          @include rem(padding, 0, 15);
+          width: calc(25% - 1.5625rem);
+          max-width: calc(25% - 1.5625rem);
+          flex: 0 0 auto;
         }
 
         .box-link {
@@ -127,7 +129,7 @@
     @include rem(margin-bottom, 40);
     @include rem(padding-bottom, 20);
 
-    .news-date {
+    time {
       font-size: $font-size-sm;
       margin-bottom: 0;
     }
@@ -148,18 +150,19 @@
   }
 
   .paragraph--type--page-section {
-    @include rem(margin, 0, 30);
-
     .layout--twocol {
       .layout__region--first {
         @include rem(padding-right, 15);
+      }
+
+      .layout__region--second {
+        @include rem(padding-left, 15);
       }
 
       .layout__region--bottom {
         .box-link {
           a {
             width: auto;
-            margin-left: 1rem;
             font-size: $font-size-lg;
             text-decoration: underline !important;
 
