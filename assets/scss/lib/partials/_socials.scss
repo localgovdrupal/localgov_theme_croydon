@@ -52,3 +52,35 @@
     }
   }
 }
+
+.services--feature-block {
+  a {
+    .services--feature-title { // hide the default title
+      display: none;
+    }
+
+    &.external-link {
+      &:after {
+        display: none; // hide the external link icon
+      }
+    }
+  }
+}
+
+.services--feature-icon {
+  &.fa-twitter {
+    color: $twitter;
+  }
+
+  &.fa-facebook {
+    color: $facebook;
+  }
+
+  &.fa-flickr {
+    color: $flickr;
+  }
+
+  &.fa-youtube {
+    color: $youtube;
+  }
+}

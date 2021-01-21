@@ -1,5 +1,5 @@
 .promo,
-.subscription--newsletter-and-social-media {
+.paragraph--type--localgov-subscribe-panel {
   background: $gray-tint;
   border-left: .3rem solid $primary;
 
@@ -19,8 +19,13 @@
     }
   }
 
-  .email-subscription-panel__title,
-  .social-media-subscription-panel__title {
-    margin-bottom: 1.5rem;
+  .email-subscription-panel,
+  .social-media-subscription-panel {
+    &__title {
+      &.h4 {
+        margin-bottom: 1.5rem;
+        font-size: $h3-font-size;
+      }
+    }
   }
 }
