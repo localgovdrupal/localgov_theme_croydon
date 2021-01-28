@@ -120,3 +120,14 @@ main a[href^="mailto:"],
 main.col-md-8 a {
   font-weight: $font-normal !important; // remove bold for main copy links
 }
+
+// axe accessibility audit flags bs visually-hidden elements as having a bad contrast ratio - setting opacity to zero seems to throw this off
+.visually-hidden {
+  opacity: 0;
+
+  &.focusable {
+    &:focus {
+      opacity: 1; // fix issue with skip to main link inheriting opacity 0
+    }
+  }
+}

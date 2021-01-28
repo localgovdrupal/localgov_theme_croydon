@@ -56,7 +56,9 @@
 .services--feature-block {
   a {
     .services--feature-title { // hide the default title
-      display: none;
+      opacity: 0; // set opacity here because axe accessibility audit didnt like display none or visibility-hidden
+      line-height: 0;
+      margin: 0;
     }
 
     &.external-link {

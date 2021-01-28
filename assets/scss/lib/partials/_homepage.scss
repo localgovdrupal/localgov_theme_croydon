@@ -229,11 +229,15 @@
   }
 }
 
-.jumbotron {
-  &.home-1 {
-    .form-control {
-      padding-top: 0;
-      padding-bottom: 0;
+.node--localgov_subsites_overview {
+  .jumbotron {
+    &.home-1 {
+      background-color: $primary;
+
+      .form-control {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }
   }
 }
