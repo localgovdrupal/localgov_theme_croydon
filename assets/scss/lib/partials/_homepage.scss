@@ -1,4 +1,10 @@
 .homepage {
+  main {
+    > section {
+      margin-bottom: 0;
+    }
+  }
+
   .layout--onecol {
     .row {
       margin: 0;
@@ -37,29 +43,29 @@
         }
 
         .box-link {
-          background: $gray-tint;
-          border-bottom: 0.3rem solid $primary;
-          height: 100%;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          padding: 1rem;
-
-          @include rem(min-height, 100);
-
           a {
-            display: block;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+            background: $gray-tint;
+            border-bottom: 0.3rem solid $primary;
             width: auto;
             text-decoration: none;
-            background: transparent;
             box-shadow: none;
             word-break: break-word;
+            font-family: $font-family-secondary;
             font-weight: $font-normal;
             font-size: $font-size-ex-ex-lg;
 
+            @include rem(padding, 16);
+            @include rem(min-height, 100);
+
             &:hover,
             &:focus {
-              background-color: $focus;
+              background: $primary;
+              border-bottom: 0.3rem solid $focus;
+              color: $white;
             }
 
             span {
@@ -103,6 +109,8 @@
 
     ul {
       li {
+        @include rem(margin-bottom, 8);
+
         a {
           color: $purple;
           text-decoration: underline;
@@ -125,6 +133,30 @@
     @include rem(margin-bottom, 40);
     @include rem(padding-bottom, 20);
 
+    h3, p {
+      width: auto;
+      display: block;
+
+      a {
+        display: inline;
+      }
+    }
+
+    div > a {
+      width: 30%;
+      float: right;
+
+      @include rem(margin-left, 16);
+
+      img {
+        display: block;
+        width: auto;
+        height: auto;
+
+        @include rem(min-width, 90);
+      }
+    }
+
     time {
       font-size: $font-size-sm;
       margin-bottom: 0;
@@ -132,10 +164,9 @@
 
     a {
       word-break: break-word;
-      color: $purple;
+      color: $carbon;
       display: block;
       text-decoration: underline;
-      margin-bottom: 1rem;
 
       &:hover,
       &:focus {

@@ -85,4 +85,10 @@
   &.fa-youtube {
     color: $youtube;
   }
+
+  &:hover {
+    &:before {
+      filter: brightness(120%);
+    }
+  }
 }
