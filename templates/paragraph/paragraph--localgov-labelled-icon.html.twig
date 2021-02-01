@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation to display a Newsroom teaser paragraph.
+ * Theme implementation to display a Labelled icon paragraph.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -39,20 +39,9 @@
  */
 #}
 
-<div class="news-list row">
-  <div class="col-12 p-0">
-    <a href="{{ link }}">{{ content.localgov_newsroom_teaser_image }}</a>
-    {{ content.localgov_newsroom_teaser_date }}
-    <h3 class="mt-2 mb-1">
-      <a href="{{ link }}">{{ content.localgov_newsroom_teaser_title }}</a>
-    </h3>
-    <p>{{ content.localgov_newsroom_teaser_summary }}</p>
-
-  </div>
-  <div class="col-12 col-md-6">
-    
-  </div>
-  <div class="col-12">
-    
-  </div>
+<div {{ attributes.addClass('services--feature-block col') }}>
+  <a href="{{ field_link }}">
+    <span{{ icon_attributes }}></span>
+    <span class="services--feature-title">{{ content.localgov_labelled_icon_title }}</span>
+  </a>
 </div>
