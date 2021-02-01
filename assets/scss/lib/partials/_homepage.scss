@@ -73,8 +73,17 @@
             font-size: $font-size-ex-ex-lg;
 
             @include rem(padding, 16);
-            @include rem(min-height, 100);
+            @include rem(min-height, 6);
             @include rem(line-height, 26);
+
+            @include media-breakpoint-up(sm) {
+              @include rem(min-height, 100);
+              @include rem(padding, 8, 16);
+            }
+
+            @include media-breakpoint-up(md) {
+              @include rem(padding, 16);
+            }
 
             &:hover,
             &:focus {
@@ -124,7 +133,33 @@
 
     ul {
       li {
+        display: block;
+        width: auto;
+        padding: 0 0 0 1rem;
+        position: relative;
+
         @include rem(margin-bottom, 8);
+
+        &:not(:last-child):after { // remove list commas
+          content: '';
+        }
+
+        &:before {
+          content: $fa-chevron-right;
+          position: absolute;
+          left: 0;
+          top: 0.125rem;
+          font-family: $font-family-icons;
+          font-weight: $fa-font-weight;
+          color: $tertiary;
+          font-size: $font-size-ex-ex-sm;
+
+          @include rem(margin-right, 5);
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
 
         a {
           color: $purple;
@@ -159,14 +194,23 @@
     }
 
     div > a {
-      width: 30%;
-      float: right;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
 
-      @include rem(margin-left, 16);
+      @include rem(margin-bottom, 16);
+
+      @include media-breakpoint-up(sm) {
+        width: 30%;
+        float: right;
+        margin-bottom: 0;
+
+        @include rem(margin-left, 16);
+      }
 
       img {
         display: block;
-        width: auto;
+        width: 100%;
         height: auto;
 
         @include rem(min-width, 90);
