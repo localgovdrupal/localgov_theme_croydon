@@ -72,18 +72,34 @@
 .services--feature-icon {
   &.fa-twitter {
     color: $twitter;
+
+    &-square {
+      color: $twitter;
+    }
   }
 
   &.fa-facebook {
     color: $facebook;
+
+    &-square {
+      color: $facebook;
+    }
   }
 
   &.fa-flickr {
     color: $flickr;
+
+    &-square {
+      color: $flickr;
+    }
   }
 
   &.fa-youtube {
     color: $youtube;
+
+    &-square {
+      color: $youtube;
+    }
   }
 
   &:hover {
