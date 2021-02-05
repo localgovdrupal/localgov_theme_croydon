@@ -39,9 +39,6 @@
  */
 #}
 
-<div {{ attributes.addClass('services--feature-block col') }}>
-  <a href="{{ field_link }}">
-    <span{{ icon_attributes }}></span>
-    <span class="services--feature-title">{{ content.localgov_labelled_icon_title }}</span>
-  </a>
-</div>
+<a href="{{ field_link }}" aria-label="{{ content.localgov_labelled_icon_title|render|striptags|trim }}">
+  <i aria-hidden="true" {{ icon_attributes }}></i>
+</a>

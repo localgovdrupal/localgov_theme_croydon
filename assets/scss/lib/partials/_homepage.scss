@@ -68,9 +68,9 @@
             text-decoration: none;
             box-shadow: none;
             word-break: break-word;
+            font-size: $font-size-lg;
             font-family: $font-family-secondary;
             font-weight: $font-normal;
-            font-size: $font-size-ex-ex-lg;
 
             @include rem(padding, 16);
             @include rem(min-height, 6);
@@ -82,6 +82,8 @@
             }
 
             @include media-breakpoint-up(md) {
+              font-size: $font-size-ex-ex-lg;
+
               @include rem(padding, 16);
             }
 
@@ -203,7 +205,6 @@
       @include media-breakpoint-up(sm) {
         width: 30%;
         float: right;
-        margin-bottom: 0;
 
         @include rem(margin-left, 16);
       }
@@ -250,7 +251,7 @@
         .box-link {
           a {
             width: auto;
-            font-size: $font-size-lg;
+            font-size: $font-size-ex-ex-lg;
             text-decoration: underline !important;
 
             &:hover,
@@ -263,6 +264,7 @@
 
               &:before {
                 top: 0.3rem;
+                font-size: 1.05rem;
               }
             }
           }
@@ -273,10 +275,16 @@
 
   .paragraph--type--localgov-subscribe-panel {
     @include rem(margin, 20, 0);
-    @include rem(padding, 20, 0);
+    @include rem(padding, 32, 0);
 
-    @include media-breakpoint-up(md) {
-      @include rem(padding, 20);
+    .form-checkboxes {
+      label {
+        font-family: $font-family-base;
+
+        a {
+          font-weight: normal;
+        }
+      }
     }
   }
 
@@ -306,6 +314,10 @@
 
   .featured-subsite__summary {
     font-size: $font-size-ex-med;
+
+    @include media-breakpoint-up(sm) {
+      font-size: $font-size-lg;
+    }
   }
 
   .email-subscription-panel__form {
@@ -354,6 +366,30 @@
         margin-top: 0;
         border-top: none;
         padding-top: 0;
+      }
+    }
+  }
+
+  .social-media-subscription-panel__links {
+    @include rem(padding-left, 15);
+    @include rem(padding-right, 15);
+
+    a {
+      &:hover {
+        background: none; // resets to remove
+        box-shadow: none; // default hover action
+      }
+
+      &:after {
+        display: none; // remove external link icon
+      }
+
+      .services--feature-icon {
+        width: auto;
+        font-size: 2.5rem;
+
+        @include rem(padding-right, 16);
+        @include rem(margin-top, 16);
       }
     }
   }
