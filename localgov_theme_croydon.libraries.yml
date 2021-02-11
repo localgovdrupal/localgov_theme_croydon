@@ -9,6 +9,7 @@ global:
   js:
     assets/js/bootstrap.min.js: {}
     assets/js/main.js: {}
+    assets/js/fitvids.js: {}
   dependencies:
     - core/jquery
     - core/drupal.ajax

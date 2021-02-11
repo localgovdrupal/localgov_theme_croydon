@@ -105,11 +105,11 @@
 }
 
 .contact-address {
+  @include rem(padding-left, 30);
+
   p {
     position: relative;
     align-self: flex-start;
-
-    @include rem(margin-left, 30);
 
     &.address {
       &:before {
