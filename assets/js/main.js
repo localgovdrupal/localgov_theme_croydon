@@ -25,7 +25,13 @@
       }
     };
 
-    $(".main-content").fitVids();
+    if ($(".main-content")) {
+      $(this).fitVids();
+
+      if ($(".fluid-width-video-wrapper").parent('p').length > 0) {
+        $(".fluid-width-video-wrapper").parent('p').addClass('yt-para');
+      };
+    }
     
     $('.page a').filter(function() {
       if(this.hostname.indexOf("croydon.gov.uk") === -1){

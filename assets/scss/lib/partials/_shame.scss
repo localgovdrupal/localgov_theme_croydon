@@ -131,3 +131,8 @@ main.col-md-8 a {
     }
   }
 }
+
+// The wysiwyg automatically adds paras around youtube videos this class is added via the JS to remove the default para padding
+main p.yt-para {
+  padding-right: 0;
+}
