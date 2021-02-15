@@ -134,3 +134,8 @@ main.col-md-8 a {
     }
   }
 }
+
+// The top position of the cookie banner is being set incorrectly by JS in IE11 - this overrides the setting. Cause needs addressing.
+.sliding-popup-top[style] {
+  top: 0 !important;
+}
