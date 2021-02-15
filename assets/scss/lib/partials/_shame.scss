@@ -88,9 +88,12 @@ iframe {
 
 // drop email addresses and over length layout links to a new line if screen reduces
 
-main a[href^="mailto:"],
-.layout a {
+main a[href^="mailto:"] {
   word-break: break-all;
+}
+
+.layout a {
+  word-break: break-word;
 }
 
 // line up search icon on directories search button
