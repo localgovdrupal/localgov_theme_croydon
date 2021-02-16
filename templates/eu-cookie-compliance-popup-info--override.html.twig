@@ -81,7 +81,7 @@
 
 {# This hidden markup is needed by Drupal.eu_cookie_compliance.setPreferenceCheckboxes() #}
 {% if cookie_categories %}
-  <div id="eu-cookie-compliance-categories" style="display: none;">
+  <div id="eu-cookie-compliance-categories" class="d-none">
     {% for key, category in cookie_categories %}
       <label for="cookie-category-{{ key }}">{{ key }}</label>
       <input type="checkbox" name="cookie-categories" id="cookie-category-{{ key }}" value="{{ key }}" {% if fix_first_cookie_category and loop.first %} checked disabled{% endif %}>
