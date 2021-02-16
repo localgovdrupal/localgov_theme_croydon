@@ -88,9 +88,12 @@ iframe {
 
 // drop email addresses and over length layout links to a new line if screen reduces
 
-main a[href^="mailto:"],
-.layout a {
+main a[href^="mailto:"] {
   word-break: break-all;
+}
+
+.layout a {
+  word-break: break-word;
 }
 
 // line up search icon on directories search button
@@ -130,4 +133,9 @@ main.col-md-8 a {
       opacity: 1; // fix issue with skip to main link inheriting opacity 0
     }
   }
+}
+
+// The top position of the cookie banner is being set incorrectly by JS in IE11 - this overrides the setting. Cause needs addressing.
+.sliding-popup-top[style] {
+  top: 0 !important;
 }

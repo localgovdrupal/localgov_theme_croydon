@@ -321,6 +321,12 @@
   }
 
   .email-subscription-panel__form {
+    .form-inline {
+      label {
+        display: block; // reset default display to fix layout issue in IE11
+      }
+    }
+
     form {
       margin-bottom: 0;
     }
