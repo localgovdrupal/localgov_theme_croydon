@@ -199,6 +199,7 @@
   -ms-flex-align: center;
   align-items: center;
   padding: .625rem 0;
+  position: relative;
 
   @include media-breakpoint-up(lg) {
     padding: 0;
