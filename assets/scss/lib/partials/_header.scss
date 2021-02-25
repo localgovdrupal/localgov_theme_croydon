@@ -123,18 +123,6 @@ header > p {
   }
 }
 
-.search-placement {
-  position: absolute;
-  top: 0.5rem;
-  width: 100%;
-
-  @include media-breakpoint-up(lg) {
-    position: revert;
-    top: unset;
-    width: auto;
-  }
-}
-
 .responsive-services {
   background: $white;
   height: 75vh;
@@ -155,21 +143,20 @@ header > p {
   }
 
   .services-title {
-    font-size: $font-size-lg;
     font-weight: $font-bold;
     color: $secondary;
     margin: 0;
 
-    @include rem(padding, 16);
+    @include rem(padding, 10);
   }
 
   ul {
-    padding: 0 0 1rem 1rem;
+    padding: 0 0 0 1rem;
     color: $secondary;
     list-style-type: none;
 
     li {
-      padding: 0.4rem 0;
+      padding: 0.4rem;
 
       a {
         font-size: $font-size-med;
