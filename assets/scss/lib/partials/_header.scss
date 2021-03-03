@@ -130,7 +130,7 @@ header > p {
 
   @include media-breakpoint-up(lg) {
     position: initial;
-    top: unset;
+    top: auto;
     width: auto;
   }
 }
