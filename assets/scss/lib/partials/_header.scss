@@ -129,7 +129,7 @@ header > p {
   width: 100%;
 
   @include media-breakpoint-up(lg) {
-    position: revert;
+    position: initial;
     top: unset;
     width: auto;
   }
