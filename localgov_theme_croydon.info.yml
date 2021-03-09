@@ -7,6 +7,7 @@ base theme: localgov_theme
 
 libraries:
   - localgov_theme_croydon/global
+  - localgov_theme_croydon/pwa
 
 # Switch off Localgov theme styles.
 libraries-override:

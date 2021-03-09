@@ -9,6 +9,7 @@ global:
   js:
     assets/js/bootstrap.min.js: {}
     assets/js/main.js: {}
+    assets/js/pwa.js: {}
   dependencies:
     - core/jquery
     - core/drupal.ajax
@@ -34,3 +35,9 @@ skip-link-relocation:
     assets/js/skip-link-relocation.js: {}
   dependencies:
     - eu_cookie_compliance/eu_cookie_compliance_bare
+
+# PWA (Progressive Web App) helper.
+# Creates an almost empty Service worker to help qualify us as a PWA.
+pwa:
+  js:
+    assets/js/pwa.js: {}
