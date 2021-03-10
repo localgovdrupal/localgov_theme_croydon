@@ -1,5 +1,5 @@
 /**
- * Includes a Service worker script.
+ * Registers a Service worker script.
  *
  * A PWA (Progressive Web App) has three requirements:
  * - HTTPS connection.

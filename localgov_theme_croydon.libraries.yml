@@ -9,7 +9,6 @@ global:
   js:
     assets/js/bootstrap.min.js: {}
     assets/js/main.js: {}
-    assets/js/pwa.js: {}
   dependencies:
     - core/jquery
     - core/drupal.ajax
