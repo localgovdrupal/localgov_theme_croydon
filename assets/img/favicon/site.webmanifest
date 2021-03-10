@@ -1,7 +1,7 @@
 {
     "name": "Croydon Council",
     "short_name": "Croydon Council",
-    "start_url": "https://www.croydon.gov.uk/",
+    "start_url": "/",
     "icons": [
         {
             "src": "android-chrome-192x192.png?v=rMqRMOG9oX",
