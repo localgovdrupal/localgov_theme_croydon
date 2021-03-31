@@ -4,7 +4,7 @@
 */
 
 .localgov_alert_banner {
-  &.localgov_alert-banner--notable-person {
+  &.localgov_alert_banner--notable-person {
     background-color: $alert-bar-notable;
 
     p,
@@ -14,7 +14,7 @@
     }
   }
 
-  &.localgov_alert-banner--major {
+  &.localgov_alert_banner--major {
     background-color: $alert-bar-major;
 
     p,
@@ -24,7 +24,7 @@
     }
   }
 
-  &.localgov_alert-banner--minor {
+  &.localgov_alert_banner--minor {
     background: $alert-bar-minor;
   }
 
