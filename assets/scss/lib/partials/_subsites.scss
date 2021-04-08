@@ -3,6 +3,13 @@
   main,
   .sidebar {
     @include rem(margin-top, 10);
+
+    .block-system-main-block {
+      .container-fluid { // remove container fluid padding for nested blocks
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
   }
 
   .sidebar {
