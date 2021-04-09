@@ -5,6 +5,8 @@
  * Functions to support theming in the localgov_theme_croydon theme.
  */
 
+use Drupal\Component\Utility\Html;
+
 /**
  * Implements hook_preprocess_page() for hook_preprocess_page__localgov_guides_overview().
  *
@@ -58,7 +60,7 @@ function localgov_theme_croydon_preprocess_file_link(&$variables) {
 
   $file = $variables['file'];
   $mime_type = $file->getMimeType();
-  // application/pdf -> pdf
+  // application/pdf -> pdf.
   $variables['file_type'] = explode('/', $mime_type)[1] ?? '-';
 
   // 123.45 KB -> 123.45KB
@@ -82,4 +84,18 @@ function localgov_theme_croydon_preprocess_block__subsitebanner_homepage(&$varia
   $banner_img = $banner_paragraph->localgov_image->entity;
   $banner_img_url = Drupal::service('entity_type.manager')->getViewBuilder($banner_img->getEntityTypeId())->view($banner_img, 'cds_image_path');
   $variables['banner_img_url'] = $banner_img_url;
+}
+
+/**
+ * Implements hook_preprocess_localgov_alert_banner() for hook_preprocess_localgov_alert_banner__cds_full_page().
+ *
+ * Adds a unique id for the top level wrapper div of the alert banner.
+ */
+function localgov_theme_croydon_preprocess_localgov_alert_banner__cds_full_page(&$variables) {
+
+  $alert_banner_id = $variables['attributes']['id'] ?? Html::getUniqueId('cds_full_page_alert_banner');
+  $variables['attributes']['id'] = $alert_banner_id;
+
+  $variables['#attached']['drupalSettings']['localgov_theme_croydon']['cds_full_page_alert_banner_id'] = $alert_banner_id;
+  $variables['#attached']['library'][] = 'localgov_theme_croydon/full_page_alert_banner';
 }

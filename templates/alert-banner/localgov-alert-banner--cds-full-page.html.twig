@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ *
+ * This template is used when viewing full page Alert banners.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ * - display_title: Boolean indicating if alert banner title should be displayed
+ * - remove_hide_link: Boolean indicating if the link to close the banner should be hidden
+ * - type_of_alert: Type of alert banner
+ *
+ * @see template_preprocess_localgov_alert_banner()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('localgov_alert_banner/alert_banner') }}
+{{ attach_library('localgov_theme_croydon/full_page_alert_banner') }}
+
+{% set has_link = content.link is not empty %}
+{% set type_of_alert =  type_of_alert|split('--')[1] %}
+{% set classes = [
+    'localgov_alert_banner',
+    'js-alert-banner',
+    'modal',
+    type_of_alert ? 'localgov_alert_banner--' ~ type_of_alert : '',
+    is_front ? 'localgov_alert_banner--homepage' : '',
+    has_link ? 'localgov_alert_banner--has-link' : 'localgov_alert_banner--no-link'
+  ]
+%}
+
+<!-- Alert Banner-->
+<div {{ attributes.addClass(classes) }} role="alert">
+  <div class="container-fluid site-max">
+    <div class="row">
+      <div class="col-12 col-sm-10 text-left pt-3 pb-2 pb-sm-3">
+        <p>
+        {% if display_title %} {{ content.title }} {% endif %}
+        {{ content|without('link', 'title') }}
+        {% if content.link %} {{ content.link }} {% endif %}
+        </p>
+      </div>
+      {% if not remove_hide_link %}
+      <div class="col-12 col-sm-2 text-right pt-0 pt-sm-3 pb-3 pl-5 text-nowrap">
+        <a href="#" id="closeGlobalBanner" class="js-alert-banner-close">{{ 'Hide' | t }} <span class="sr-only">{{ 'Click here to hide this notification' | t }}</span></a><i class="fas fa-times-circle" aria-hidden="true"></i>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<!-- END Alert Banner -->

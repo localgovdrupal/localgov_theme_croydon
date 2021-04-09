@@ -34,3 +34,12 @@ skip-link-relocation:
     assets/js/skip-link-relocation.js: {}
   dependencies:
     - eu_cookie_compliance/eu_cookie_compliance_bare
+
+full_page_alert_banner:
+  js:
+    assets/js/full_page_alert_banner.js: {}
+  dependencies:
+   - core/drupalSettings
+   - localgov_alert_banner/alert_banner
+   - core/jquery
+   - core/jquery.cookie
