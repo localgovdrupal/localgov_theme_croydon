@@ -34,22 +34,53 @@
 %}
 
 <!-- Alert Banner-->
-<div {{ attributes.addClass(classes) }} role="alert">
-  <div class="container-fluid site-max">
-    <div class="row">
-      <div class="col-12 col-sm-10 text-left pt-3 pb-2 pb-sm-3">
-        <p>
-        {% if display_title %} {{ content.title }} {% endif %}
-        {{ content|without('link', 'title') }}
-        {% if content.link %} {{ content.link }} {% endif %}
-        </p>
-      </div>
-      {% if not remove_hide_link %}
-      <div class="col-12 col-sm-2 text-right pt-0 pt-sm-3 pb-3 pl-5 text-nowrap">
-        <a href="#" id="closeGlobalBanner" class="js-alert-banner-close">{{ 'Hide' | t }} <span class="sr-only">{{ 'Click here to hide this notification' | t }}</span></a><i class="fas fa-times-circle" aria-hidden="true"></i>
-      </div>
-      {% endif %}
-    </div>
+<main {{ attributes.addClass(classes, 'modal', 'bg-graphite') }} tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-modal="true">
+
+  <div class="modal-dialog modal-dialog-centered homepage-takeover" role="document">
+    
+    <div class="modal-content bg-graphite border-0">
+            <div class="modal-header bg-graphite px-2 px-sm-3">
+                <!-- Logo -->
+                <img class="img-fluid takeover-logo" src="/themes/contrib/localgov_theme_croydon/assets/img/takeover-logo.svg" alt="Croydon Council Logo"><!-- Hide this -->
+
+              {% if not remove_hide_link %}
+              <a class="js-alert-banner-close close opacity-100 text-white ml-auto" data-dismiss="modal" aria-label="Close">{{ 'Hide' | t }} <span class="sr-only">{{ 'Click here to hide this notification' | t }}</span><span class="fa fa-eye-slash ml-1 text-white" aria-hidden="true"></span></a>
+              {% endif %}
+
+
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body bg-graphite px-2 px-sm-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                            <article><div id="field--field_media_image">
+    <div class="visually-hidden">Image</div>
+
+    {{ content.field_alert_banner_image }}
+                  </div>
+
+  </article></div>
+                    </div><!-- End col-sm-4 -->
+                    <div class="col-sm-8">
+                        <h1>{% if display_title %} {{ content.title }} {% endif %}</h1>
+                        
+                        <div>{{ content|without('link', 'title', 'field_alert_banner_image') }}
+                        {% if content.link %} {{ content.link }} {% endif %}
+                        </div>
+
+                        <!-- Modal button -->
+                        <p><a href="#" class="btn btn-primary" data-dismiss="modal" aria-label="Continue to the homepage"><span class="fa fa-chevron-right" aria-hidden="true"></span>Continue to the homepage</a></p>
+
+                    </div><!-- End col-sm-9 -->
+                </div><!-- End row -->
+            </div>
+        </div>
+
+
   </div>
-</div>
+
+
+
+</main>
 <!-- END Alert Banner -->

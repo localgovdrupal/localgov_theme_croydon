@@ -1,4 +1,4 @@
-#homepageTakeover {
+#cds-full-page-alert-banner {
   .modal-dialog-centered.homepage-takeover {
     @include rem(max-width, 1000);
   }
@@ -34,9 +34,18 @@
     }
   }
 
-  a.btn {
-    text-decoration: none;
-    text-align: left;
+  a {
+    margin: 1rem 0 0.5rem;
+    display: inline-block;
+
+    &.close {
+      margin: 0;
+    }
+
+    &.btn {
+      text-decoration: none;
+      text-align: left;
+    }
   }
 
   .takeover-logo {
