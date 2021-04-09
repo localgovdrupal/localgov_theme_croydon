@@ -54,18 +54,19 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="mb-4">
-                            <article><div id="field--field_media_image">
-    <div class="visually-hidden">Image</div>
-
-    {{ content.field_alert_banner_image }}
-                  </div>
-
-  </article></div>
+                          <article>
+                            <h1 class="d-sm-none">{% if display_title %} {{ content.title }} {% endif %}</h1>
+                            <div id="field--field_media_image">
+                              <div class="visually-hidden">Image</div>
+                                {{ content.field_alert_banner_image }}
+                              </div>
+                          </article>
+                        </div>
                     </div><!-- End col-sm-4 -->
                     <div class="col-sm-8">
-                        <h1>{% if display_title %} {{ content.title }} {% endif %}</h1>
+                        <h1 class="d-none d-sm-block">{% if display_title %} {{ content.title }} {% endif %}</h1>
                         
-                        <div>{{ content|without('link', 'title', 'field_alert_banner_image') }}
+                        <div class="takeover-content">{{ content|without('link', 'title', 'field_alert_banner_image') }}
                         {% if content.link %} {{ content.link }} {% endif %}
                         </div>
 

@@ -1,4 +1,6 @@
 #cds-full-page-alert-banner {
+  margin: 0;
+
   .modal-dialog-centered.homepage-takeover {
     @include rem(max-width, 1000);
   }
@@ -25,26 +27,29 @@
     }
   }
 
-  .link-text {
-    color: $yellow;
+  .img-fluid {
+    padding: 2rem;
 
-    &:hover,
-    &:focus {
-      color: $carbon;
+    @include media-breakpoint-up(sm) {
+      padding: 0;
     }
   }
 
-  a {
-    margin: 1rem 0 0.5rem;
-    display: inline-block;
+  .takeover-content {
+    a {
+      color: $yellow;
+      margin: 1rem 0 0.5rem;
+      display: inline-block;
 
-    &.close {
-      margin: 0;
-    }
+      &:hover,
+      &:focus {
+        color: $carbon;
+      }
 
-    &.btn {
-      text-decoration: none;
-      text-align: left;
+      &.btn {
+        text-decoration: none;
+        text-align: left;
+      }
     }
   }
 
@@ -52,6 +57,7 @@
     width: 25%;
     min-width: 6.25rem;
     max-width: 13.75rem;
+    padding: 0;
   }
 }
 
