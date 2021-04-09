@@ -1,0 +1,51 @@
+#homepageTakeover {
+  .modal-dialog-centered.homepage-takeover {
+    @include rem(max-width, 1000);
+  }
+
+  .close {
+    font-size: $font-size-lg;
+    text-decoration: underline;
+    text-shadow: none;
+    font-weight: 700 !important;
+
+    &:hover,
+    &:focus,
+    &:hover span,
+    &:focus span {
+      color: $carbon !important;
+      opacity: 1;
+    }
+
+    span {
+      font-size: $font-size-lg;
+      text-decoration: none;
+      text-shadow: none;
+      font-weight: 700 !important;
+    }
+  }
+
+  .link-text {
+    color: $yellow;
+
+    &:hover,
+    &:focus {
+      color: $carbon;
+    }
+  }
+
+  a.btn {
+    text-decoration: none;
+    text-align: left;
+  }
+
+  .takeover-logo {
+    width: 25%;
+    min-width: 6.25rem;
+    max-width: 13.75rem;
+  }
+}
+
+.opacity-100 {
+  opacity: 100;
+}
