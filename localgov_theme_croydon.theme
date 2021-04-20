@@ -67,11 +67,19 @@ function localgov_theme_croydon_preprocess_file_link(&$variables) {
       break;
 
     case 'vnd.openxmlformats-officedocument.spreadsheetml.sheet':
-      $filetype = 'Spreadsheet';
+      $filetype = 'Xlsx';
       break;
 
     case 'vnd.openxmlformats-officedocument.presentationml.presentation':
-      $filetype = 'Powerpoint';
+      $filetype = 'Pptx';
+      break;
+
+    case 'vnd.ms-powerpoint':
+      $filetype = 'ms-powerpoint';
+      break;
+
+    case 'vnd.ms-excel':
+      $filetype = 'ms-excel';
       break;
   }
 
