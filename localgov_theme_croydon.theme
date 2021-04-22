@@ -58,8 +58,32 @@ function localgov_theme_croydon_preprocess_file_link(&$variables) {
 
   $file = $variables['file'];
   $mime_type = $file->getMimeType();
-  // application/pdf -> pdf
-  $variables['file_type'] = explode('/', $mime_type)[1] ?? '-';
+  // application/pdf -> pdf.
+  $filetype = explode('/', $mime_type)[1] ?? '-';
+
+  switch ($filetype) {
+    case 'vnd.openxmlformats-officedocument.wordprocessingml.document':
+      $filetype = 'Docx';
+      break;
+
+    case 'vnd.openxmlformats-officedocument.spreadsheetml.sheet':
+      $filetype = 'Xlsx';
+      break;
+
+    case 'vnd.openxmlformats-officedocument.presentationml.presentation':
+      $filetype = 'Pptx';
+      break;
+
+    case 'vnd.ms-powerpoint':
+      $filetype = 'ms-powerpoint';
+      break;
+
+    case 'vnd.ms-excel':
+      $filetype = 'ms-excel';
+      break;
+  }
+
+  $variables['file_type'] = strtoupper($filetype);
 
   // 123.45 KB -> 123.45KB
   $variables['file_size'] = strtr($variables['file_size'], [' ' => '']);
