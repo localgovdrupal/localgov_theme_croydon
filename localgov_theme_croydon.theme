@@ -49,44 +49,26 @@ function localgov_theme_croydon_preprocess_page__localgov_services_page(&$variab
  * Implements hook_preprocess_file_link().
  *
  * Changes:
- * - Inserts file *type* into the theme variable.
+ * - Inserts file *type* and size into the theme variable.
  * - Reformats file size.  Example: 123.4KB.
+ * - Appends file metadata to the file link text.
  *
  * @see template_preprocess_file_link()
  */
 function localgov_theme_croydon_preprocess_file_link(&$variables) {
 
   $file = $variables['file'];
-  $mime_type = $file->getMimeType();
-  // application/pdf -> pdf.
-  $filetype = explode('/', $mime_type)[1] ?? '-';
+  $filename = $file->getFilename();
+  $file_extension = pathinfo($filename, PATHINFO_EXTENSION);
 
-  switch ($filetype) {
-    case 'vnd.openxmlformats-officedocument.wordprocessingml.document':
-      $filetype = 'Docx';
-      break;
-
-    case 'vnd.openxmlformats-officedocument.spreadsheetml.sheet':
-      $filetype = 'Xlsx';
-      break;
-
-    case 'vnd.openxmlformats-officedocument.presentationml.presentation':
-      $filetype = 'Pptx';
-      break;
-
-    case 'vnd.ms-powerpoint':
-      $filetype = 'ms-powerpoint';
-      break;
-
-    case 'vnd.ms-excel':
-      $filetype = 'ms-excel';
-      break;
-  }
-
-  $variables['file_type'] = strtoupper($filetype);
+  $variables['file_type'] = strtoupper($file_extension);
 
   // 123.45 KB -> 123.45KB
   $variables['file_size'] = strtr($variables['file_size'], [' ' => '']);
+
+  $variables['link']['#title'] = [
+    '#markup' => "{$variables['link']['#title']} <span class=\"file-meta\">(<span class=\"file-type\">{$variables['file_type']}</span>, <span class=\"file-size\">{$variables['file_size']}</span>)</span>",
+  ];
 }
 
 /**
