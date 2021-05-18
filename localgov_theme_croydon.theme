@@ -46,32 +46,6 @@ function localgov_theme_croydon_preprocess_page__localgov_services_page(&$variab
 }
 
 /**
- * Implements hook_preprocess_file_link().
- *
- * Changes:
- * - Inserts file *type* and size into the theme variable.
- * - Reformats file size.  Example: 123.4KB.
- * - Appends file metadata to the file link text.
- *
- * @see template_preprocess_file_link()
- */
-function localgov_theme_croydon_preprocess_file_link(&$variables) {
-
-  $file = $variables['file'];
-  $filename = $file->getFilename();
-  $file_extension = pathinfo($filename, PATHINFO_EXTENSION);
-
-  $variables['file_type'] = strtoupper($file_extension);
-
-  // 123.45 KB -> 123.45KB
-  $variables['file_size'] = strtr($variables['file_size'], [' ' => '']);
-
-  $variables['link']['#title'] = [
-    '#markup' => "{$variables['link']['#title']} <span class=\"file-meta\">(<span class=\"file-type\">{$variables['file_type']}</span>, <span class=\"file-size\">{$variables['file_size']}</span>)</span>",
-  ];
-}
-
-/**
  * Implements hook_preprocess_block() for hook_preprocess_block__subsitebanner_homepage().
  *
  * Makes the render array for the *banner image path* available to the block
