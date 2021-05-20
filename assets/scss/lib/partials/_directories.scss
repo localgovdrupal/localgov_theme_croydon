@@ -131,3 +131,29 @@
 .views-exposed-form {
   margin-bottom: 1rem;
 }
+
+// override the settings for the open street map links at the bottom of the maps
+
+.leaflet-control-container {
+  a {
+    @include rem(font-size, 11);
+
+    &.external-link:after {
+      display: none;
+    }
+  }
+}
+
+// GDS styling overrides
+
+.block-localgov-directories {
+  .form-optional-text { // remove optional text
+    display: none;
+  }
+
+  div {
+    .form-actions {
+      padding-left: initial; // gds sets this to 2em
+    }
+  }
+}
