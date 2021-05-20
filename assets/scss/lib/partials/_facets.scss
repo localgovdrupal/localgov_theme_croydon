@@ -5,12 +5,44 @@
 
 .facet-filter-checkboxes {
   li {
-    border-bottom: 0;
+    border: 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 0.06rem;
+      background: $hr-color;
+      top: 100%;
+      width: 96%;
+      left: 79%;
+      transform: translateX(-80%);
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
   }
 
   label {
+    margin-left: 0.5rem;
+
     &:before {
+      margin-left: 0.5rem;
       border: .063rem solid $checkbox-outline;
     }
   }
+}
+
+.facets-widget-checkbox {
+  background-color: $pink-tint;
+}
+
+.facet-filter-checkboxes input[type=checkbox]:checked ~ label:before {
+  border: 0.063rem solid $success;
+  color: $success;
+
+  @include rem(width, 18);
+  @include rem(height, 18);
 }
