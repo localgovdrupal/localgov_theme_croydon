@@ -5,6 +5,9 @@
  * Functions to support theming in the localgov_theme_croydon theme.
  */
 
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+
 /**
  * Implements hook_preprocess_page() for hook_preprocess_page__localgov_guides_overview().
  *
@@ -62,4 +65,23 @@ function localgov_theme_croydon_preprocess_block__subsitebanner_homepage(&$varia
   $banner_img = $banner_paragraph->localgov_image->entity;
   $banner_img_url = Drupal::service('entity_type.manager')->getViewBuilder($banner_img->getEntityTypeId())->view($banner_img, 'cds_image_path');
   $variables['banner_img_url'] = $banner_img_url;
+}
+
+/**
+ * Implements hook_preprocess_hook() for hook_preprocess_paragraph().
+ *
+ * Changes:
+ * - Overrides Call-out-box background image.  Replaces the 21:9 crop image with
+ *   a Free-form crop image.
+ *
+ * @see localgov_subsites_paragraphs_preprocess_paragraph()
+ */
+function localgov_theme_croydon_preprocess_paragraph(&$variables) {
+
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->bundle() === 'localgov_call_out_box') {
+    $fid = $paragraph->get('localgov_background_image')->entity->field_media_image[0]->getValue()['target_id'];
+    $file_url = File::load($fid)->getFileUri();
+    $variables['background_url'] = ImageStyle::load('cds_original_ratio_768_width')->buildUrl($file_url);
+  }
 }
