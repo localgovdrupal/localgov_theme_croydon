@@ -136,6 +136,10 @@
 
     .call-out-box {
       background-color: $calloutbg;
+
+      h3 {
+        margin-top: 0;
+      }
     }
 
     .author {
@@ -248,8 +252,22 @@
   }
 }
 
-// Localgov theme overrides
+// Localgov theme & core overrides
 
-.paragraph--type--page-section .layout--twocol .layout__region--first {
-  padding-right: 0;
+.node--localgov_subsites_page {
+  .paragraph--type--page-section {
+    .layout--twocol {
+      .layout__region--first {
+        display: flex; // match heights
+
+        @include rem(padding-right, 15); // ignore padding set in core
+      }
+
+      .layout__region--second {
+        display: flex; // match heights
+
+        @include rem(padding-left, 15); // ignore padding set in core
+      }
+    }
+  }
 }
