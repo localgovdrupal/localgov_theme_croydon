@@ -24,7 +24,7 @@
 {% set type_of_alert =  type_of_alert|split('--')[1] %}
 {% set classes = [
     'localgov_alert_banner',
-    'js-alert-banner',
+    'js-localgov-alert-banner',
     type_of_alert ? 'localgov_alert_banner--' ~ type_of_alert : '',
     is_front ? 'localgov_alert_banner--homepage' : '',
     has_link ? 'localgov_alert_banner--has-link' : 'localgov_alert_banner--no-link'
@@ -45,7 +45,7 @@
       </div>
       {% if not remove_hide_link %}
       <div class="col-12 col-sm-2 text-right pt-0 pt-sm-3 pb-3 pl-5 text-nowrap">
-        <a href="#" id="closeGlobalBanner" class="js-alert-banner-close">{{ 'Hide' | t }} <span class="sr-only">{{ 'Click here to hide this notification' | t }}</span></a><i class="fas fa-times-circle" aria-hidden="true"></i>
+        <a href="#" id="closeGlobalBanner" class="js-localgov-alert-banner__close">{{ 'Hide' | t }} <span class="sr-only">{{ 'Click here to hide this notification' | t }}</span></a><i class="fas fa-times-circle" aria-hidden="true"></i>
       </div>
       {% endif %}
     </div>
