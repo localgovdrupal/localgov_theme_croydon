@@ -1,0 +1,67 @@
+#cds-full-page-alert-banner {
+  margin: 0;
+
+  .modal-dialog-centered.homepage-takeover {
+    @include rem(max-width, 1000);
+  }
+
+  .close {
+    font-size: $font-size-lg;
+    text-decoration: underline;
+    text-shadow: none;
+    font-weight: 700 !important;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:hover span,
+    &:focus span {
+      color: $carbon !important;
+      opacity: 1;
+    }
+
+    span {
+      font-size: $font-size-lg;
+      text-decoration: none;
+      text-shadow: none;
+      font-weight: 700 !important;
+    }
+  }
+
+  .img-fluid {
+    padding: 2rem;
+
+    @include media-breakpoint-up(sm) {
+      padding: 0;
+    }
+  }
+
+  .takeover-content {
+    a {
+      color: $yellow;
+      margin: 1rem 0 0.5rem;
+      display: inline-block;
+
+      &:hover,
+      &:focus {
+        color: $carbon;
+      }
+
+      &.btn {
+        text-decoration: none;
+        text-align: left;
+      }
+    }
+  }
+
+  .takeover-logo {
+    width: 25%;
+    min-width: 6.25rem;
+    max-width: 13.75rem;
+    padding: 0;
+  }
+}
+
+.opacity-100 {
+  opacity: 100;
+}

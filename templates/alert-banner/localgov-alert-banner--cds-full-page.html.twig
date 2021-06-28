@@ -1,0 +1,85 @@
+{#
+/**
+ * @file
+ * This template is used when viewing full page Alert banners.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ * - display_title: Boolean indicating if alert banner title should be displayed
+ * - remove_hide_link: Boolean indicating if the link to close the banner should be hidden
+ * - type_of_alert: Type of alert banner
+ *
+ * @see localgov_theme_croydon_preprocess_localgov_alert_banner__cds_full_page()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('localgov_alert_banner/alert_banner') }}
+{{ attach_library('localgov_theme_croydon/full_page_alert_banner') }}
+
+{% set has_link = content.link is not empty %}
+{% set type_of_alert =  type_of_alert|split('--')[1] %}
+{% set classes = [
+    'localgov_alert_banner',
+    'js-alert-banner',
+    'modal',
+    type_of_alert ? 'localgov_alert_banner--' ~ type_of_alert : '',
+    is_front ? 'localgov_alert_banner--homepage' : '',
+    has_link ? 'localgov_alert_banner--has-link' : 'localgov_alert_banner--no-link'
+  ]
+%}
+
+<!-- Alert Banner-->
+<main {{ attributes.addClass(classes, 'modal', 'bg-graphite') }} tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-modal="true">
+
+  <div class="modal-dialog modal-dialog-centered homepage-takeover" role="document">
+    
+    <div class="modal-content bg-graphite border-0">
+            <div class="modal-header bg-graphite px-2 px-sm-3">
+                <!-- Logo -->
+                <img class="img-fluid takeover-logo" src="/themes/contrib/localgov_theme_croydon/assets/img/takeover-logo.svg" alt="Croydon Council Logo"><!-- Hide this -->
+
+              {% if not remove_hide_link %}
+              <a class="js-alert-banner-close close opacity-100 text-white ml-auto" data-dismiss="modal" aria-label="Close">{{ 'Hide' | t }} <span class="sr-only">{{ 'Click here to hide this notification' | t }}</span><span class="fa fa-eye-slash ml-1 text-white" aria-hidden="true"></span></a>
+              {% endif %}
+
+
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body bg-graphite px-2 px-sm-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                          <article>
+                            <h1 class="d-sm-none">{% if display_title %} {{ content.title }} {% endif %}</h1>
+                            <div id="field--field_media_image">
+                              <div class="visually-hidden">Image</div>
+                                {{ content.field_alert_banner_image }}
+                              </div>
+                          </article>
+                        </div>
+                    </div><!-- End col-sm-4 -->
+                    <div class="col-sm-8">
+                        <h1 class="d-none d-sm-block">{% if display_title %} {{ content.title }} {% endif %}</h1>
+                        
+                        <div class="takeover-content">{{ content|without('link', 'title', 'field_alert_banner_image') }}
+                        {% if content.link %} {{ content.link }} {% endif %}
+                        </div>
+
+                        <!-- Modal button -->
+                        <p><a href="#" class="btn btn-primary" data-dismiss="modal" aria-label="Continue to the homepage"><span class="fa fa-chevron-right" aria-hidden="true"></span>Continue to the homepage</a></p>
+
+                    </div><!-- End col-sm-9 -->
+                </div><!-- End row -->
+            </div>
+        </div>
+
+
+  </div>
+
+
+
+</main>
+<!-- END Alert Banner -->
