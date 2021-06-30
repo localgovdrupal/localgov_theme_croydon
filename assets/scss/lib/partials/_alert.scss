@@ -47,7 +47,9 @@
   }
 
   &.localgov_alert_banner--major,
-  &.localgov-alert-banner--major {
+  &.localgov-alert-banner--major,
+  &.localgov_alert_banner--announcement,
+  &.localgov-alert-banner--announcement {
     background-color: $alert-bar-major;
 
     p,
