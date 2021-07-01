@@ -3,8 +3,10 @@
 * This file is an override of _alert.scss in localgov_theme.
 */
 
-.localgov_alert_banner {
-  &.localgov_alert_banner--notable-person {
+.localgov_alert_banner,
+.localgov-alert-banner {
+  &.localgov_alert_banner--notable-person,
+  &.localgov-alert-banner--notable-person {
     background-color: $alert-bar-notable;
 
     p,
@@ -12,9 +14,42 @@
     i {
       color: $white;
     }
+
+    &.modal {
+      margin-top: 0; // override global main setting
+      background: transparent;
+
+      .modal-content {
+        background-color: $alert-bar-notable;
+
+        .modal-body {
+          @include rem(padding, 15);
+          @include rem(margin-bottom, 30);
+
+          p { // for the modal - override inherited styling from alert banner
+            padding-left: 0;
+
+            &:before {
+              display: none;
+            }
+          }
+
+          .takeover-content {
+            a {
+              display: inline-block;
+
+              @include rem(margin, 10, 0);
+            }
+          }
+        }
+      }
+    }
   }
 
-  &.localgov_alert_banner--major {
+  &.localgov_alert_banner--major,
+  &.localgov-alert-banner--major,
+  &.localgov_alert_banner--announcement,
+  &.localgov-alert-banner--announcement {
     background-color: $alert-bar-major;
 
     p,
@@ -24,7 +59,8 @@
     }
   }
 
-  &.localgov_alert_banner--minor {
+  &.localgov_alert_banner--minor,
+  &.localgov-alert-banner--minor {
     background: $alert-bar-minor;
   }
 
