@@ -1,0 +1,44 @@
+{% extends '@localgov_theme/system/page.html.twig' %}
+
+{% block header %}
+  {% include '@localgov_theme_croydon/system/header.html.twig' with {'page': page, 'border': true} %}
+{% endblock %}
+
+{% block breadcrumbs %}
+  <div class="container-fluid site-max">
+    <div class="row">
+      <div class="region region-breadcrumb">
+        <div class="col-sm-12">
+          {{ link('Home', 'internal:/') }} &gt; {breadcrumb}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <main id="content" role="main" class="column main-content col-md-8">
+    <section class="section">
+      <a id="main-content" tabindex="-1"></a>
+
+      <div class="block-system-main-block">
+        {# Site admins should be able to edit/delete the ModernGov template page. #}
+        {% if is_admin %}
+          {{ page.content }}
+        {% else %}
+          {content}
+        {% endif %}
+      </div>
+    </section>
+  </main>
+
+  <div id="sidebar-second" class="column sidebar col-md-4">
+    <aside class="section" role="complementary">
+      {sidenav}
+    </aside>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {% include '@localgov_theme_croydon/system/footer.html.twig' with {'page': page, 'border': true} %}
+{% endblock %}

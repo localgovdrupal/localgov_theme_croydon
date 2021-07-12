@@ -81,7 +81,7 @@
         <section>
           <h2>Accessibility</h2>
           <p>We are committed to making our website accessible to all visitors.</p>
-          <p>Read our <a href="/accessibility">accessibility statement</a></p>
+          <p>Read our <a href="https://www.croydon.gov.uk/accessibility">accessibility statement</a></p>
         </section>
       </div>
     </div>
@@ -93,7 +93,7 @@
   <div class="container-fluid site-max">
     <div class="row">
       <div class="col-12 col-lg-2 d-flex justify-content-start align-items-center">
-        <a class="navbar-brand pt-3 pb-3" href="/" title="Go to London Borough of Croydon Homepage"><img class="img-fluid" src="/themes/contrib/localgov_theme_croydon/footer-logo.png" alt="Croydon Council Footer Logo" /></a>
+        <a class="navbar-brand pt-3 pb-3" href="{{ front_page }}" title="Go to London Borough of Croydon Homepage"><img class="img-fluid" src="{{ front_page|trim('/') }}/themes/contrib/localgov_theme_croydon/footer-logo.png" alt="Croydon Council Footer Logo" /></a>
       </div>
       <div class="col-12 col-lg-7 d-flex justify-content-start align-items-center">
         <nav aria-label="Footer Navigation">
@@ -108,7 +108,7 @@
               <a href="https://www.croydon.gov.uk/accessibility">Accessibility</a>
             </li>
             <li class="mr-4 mb-1 mb-sm-0">
-              <a href="/cookies">Cookies</a>
+              {{ link('Cookies', 'internal:/cookies') }}
             </li>
             <li class="mr-4 mb-1 mb-sm-0">
               <a href="https://www.croydon.gov.uk/privacy">Privacy</a>
