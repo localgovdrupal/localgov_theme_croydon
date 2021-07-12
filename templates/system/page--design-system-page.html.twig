@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Theme template to display a Design system page.
+ */
+#}
+
+{% extends '@localgov_theme/system/page.html.twig' %}
+
+{% block header %}
+  {% include '@localgov_theme_croydon/system/header.html.twig' with {'page': page, 'border': true} %}
+{% endblock %}
+
+{% block content %}
+  {% if has_sidebar_first %}
+    <div id="sidebar-first" class="column sidebar col-md-4">
+      <aside class="section" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    </div>
+  {% endif %}
+
+  <main id="content" role="main"{{ content_attributes.addClass(content_classes).addClass('design-system-page content col order-md-2') }}>
+    {% if page.content_top %}
+      {{ page.content_top }}
+    {% endif %}
+
+    <section class="section">
+      <a id="main-content" tabindex="-1"></a>
+      {{ page.content }}
+    </section>
+  </main>
+
+  {% if has_sidebar_second %}
+    <div id="sidebar-second" class="column sidebar col-md-4">
+      <aside class="section" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    </div>
+  {% endif %}
+
+  {% if page.content_bottom %}
+  <div class="col-sm-12">
+    {{ page.content_bottom }}
+  </div>
+  {% endif %}
+{% endblock %}
+
+
+{% block footer %}
+  {% include '@localgov_theme_croydon/system/footer.html.twig' with {'page': page, 'border': true} %}
+{% endblock %}
