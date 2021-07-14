@@ -15,14 +15,14 @@
   <div class="w-100"></div>
 
   {% if has_sidebar_first %}
-    <div id="sidebar-first" class="column sidebar col-md-4">
+    <div id="sidebar-first" class="column sidebar col-md-4 mt-0">
       <aside class="section" role="complementary">
         {{ page.sidebar_first }}
       </aside>
     </div>
   {% endif %}
 
-  <main id="content" role="main"{{ content_attributes.addClass(content_classes).addClass('design-system-page content col order-md-2') }}>
+  <main id="content" role="main"{{ content_attributes.addClass(content_classes).addClass('design-system-page content col order-md-2 mt-0') }}>
     {% if page.content_top %}
       {{ page.content_top }}
     {% endif %}
