@@ -105,3 +105,15 @@
     background-color: $primary;
   }
 }
+
+
+.feedback-form-page.bg-purple-tint {
+  a {
+    color: $purple;
+
+    &:focus,
+    &:hover {
+      color: $carbon;
+    }
+  }
+}
