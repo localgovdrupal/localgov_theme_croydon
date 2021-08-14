@@ -1,0 +1,22 @@
+// Moderngov template specific CSS
+// Prefixing the classes with .node--localgov_modern_gov_page ensures
+// the classes are only applied on the ModernGov template
+
+// Remove bullets on sidebar links
+.node--localgov_modern_gov_page .sidebar ul li {
+  list-style: none;
+  margin-bottom: 0.25rem;
+}
+
+// Remove external link on breadcrumb
+.node--localgov_modern_gov_page .region-breadcrumb .external-link:after {
+  display: none;
+}
+
+// Replicate the normal breadcrumb
+.node--localgov_modern_gov_page .region-breadcrumb .col-sm-12 {
+  width: calc(100% - 1.875rem);
+  padding: 0.938rem 0;
+  margin: 0 0.938rem;
+  border-bottom: .0625rem solid $light;
+}
