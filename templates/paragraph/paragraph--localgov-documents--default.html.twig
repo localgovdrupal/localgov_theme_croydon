@@ -55,7 +55,8 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       {% if documents %}
-      <h3>{{ 'File attachments'|t }}</h3>
+      {# Strips out the string '> Paragraphs' from the paragraph label #}
+      <h3>{{ paragraph.label |replace({'> Paragraphs':''}) }}</h3>
         <ul>
           {% for document in documents %}
             <li>{{ document.name }}</li>
