@@ -4,6 +4,10 @@
 */
 
 .localgov-alert-banner {
+  &[style] {
+    top: 1rem;
+  }
+
   &.localgov-alert-banner--notable-person {
     background-color: $alert-bar-notable;
 
