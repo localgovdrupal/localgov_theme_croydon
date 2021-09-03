@@ -136,8 +136,3 @@ main.col-md-8 a {
 .sliding-popup-top[style] {
   top: 0 !important;
 }
-
-// temp fix for subsites misaligned text - to be removed next time we merge with LGD
-.node--type-localgov-subsites-page .layout--onecol__flexible .layout__region--content.row {
-  margin-left: 0;
-}
