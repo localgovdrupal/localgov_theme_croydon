@@ -93,6 +93,11 @@ main a[href^="mailto:"],
   word-break: break-word;
 }
 
+// fix for wrapping contacts email
+.contact-phone a[href^="mailto:"] {
+  word-break: initial;
+}
+
 // line up search icon on directories search button
 .views-exposed-form button:after {
   @include rem(top, 11);
