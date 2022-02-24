@@ -14,36 +14,6 @@
     i {
       color: $white;
     }
-
-    &.modal {
-      margin-top: 0; // override global main setting
-      background: transparent;
-
-      .modal-content {
-        background-color: $alert-bar-notable;
-
-        .modal-body {
-          @include rem(padding, 15);
-          @include rem(margin-bottom, 30);
-
-          p { // for the modal - override inherited styling from alert banner
-            padding-left: 0;
-
-            &:before {
-              display: none;
-            }
-          }
-
-          .takeover-content {
-            a {
-              display: inline-block;
-
-              @include rem(margin, 10, 0);
-            }
-          }
-        }
-      }
-    }
   }
 
   &.localgov_alert_banner--major,
@@ -62,6 +32,96 @@
   &.localgov_alert_banner--minor,
   &.localgov-alert-banner--minor {
     background: $alert-bar-minor;
+  }
+
+  &.localgov-alert-banner-full {
+    background-color: $carbon;
+    border: 0;
+
+    @include rem(padding, 40);
+
+    h1 {
+      @include rem(margin, 80, 0, 40);
+    }
+
+    .localgov-alert-banner-full--centered {
+      background: url('../../../logo.svg') top left no-repeat;
+      background-color: $alert-bar-notable;
+      background-size: 40%;
+      overflow-x: hidden;
+      position: relative;
+
+      @include rem(margin-bottom, 30);
+
+      @include media-breakpoint-up(md) {
+        background-size: 20%;
+      }
+
+      .localgov-alert-banner__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .localgov-alert-banner-full--content {
+        @extend .row;
+
+        @include rem(padding, 15);
+
+        .localgov-alert-banner-full--text {
+          @include media-breakpoint-up(md) {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+
+          @include rem(padding, 15, 0);
+
+          @include media-breakpoint-up(md) {
+            @include rem(padding, 0, 30);
+          }
+
+
+          a {
+            display: inline-block;
+
+            @include rem(margin, 15, 0);
+          }
+
+          p { // for the modal - override inherited styling from alert banner
+            padding-left: 0;
+
+            &:before {
+              display: none;
+            }
+          }
+
+          button {
+            @extend .link-button;
+            @extend .btn-primary;
+
+            @include rem(margin, 15, 0);
+
+            &:hover,
+            &:focus {
+              color: $white;
+            }
+
+            &:after {
+              @include rem(margin-left, 10);
+            }
+          }
+        }
+
+        .localgov-alert-banner-full--image {
+          padding: 0;
+
+          @include media-breakpoint-up(md) {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+        }
+      }
+    }
   }
 
   div > div {
@@ -103,4 +163,9 @@
       }
     }
   }
+}
+
+/* remove after latest is pulled from LGD */
+.localgov-alert-banner-full[style] { /* firefox fix for incorrect vertical centering */
+  top: 1rem;
 }
