@@ -14,7 +14,7 @@
 (function moveSkipLinkToTop(Drupal) {
   Drupal.behaviors.moveSkipLinkToTop = {
     attach() {
-      const skipLink = document.querySelector("body > a.skip-link");
+      const skipLink = document.querySelector(".skip-link");
       const hasNoSkipLink = !skipLink;
       if (hasNoSkipLink) {
         return;
