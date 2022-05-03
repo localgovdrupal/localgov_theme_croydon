@@ -18,6 +18,10 @@ libraries-override:
     js:
       assets/js/main.js: false
       assets/js/bootstrap.min.js: false
+  localgov_theme/skip-link-relocation:
+    js:
+      assets/js/skip-link-relocation.js: assets/js/skip-link-relocation.js
+
 
 regions:
   header: "Header"
