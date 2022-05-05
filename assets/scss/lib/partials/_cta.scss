@@ -2,6 +2,13 @@
  * @file
  * This file is an override of _cta.scss in localgov_theme.
  */
+.cta {
+  ul {
+    li {
+      padding-right: 0.5rem; // fix for lengthy links touching each other
+    }
+  }
+}
 
 .cta-link {
   position: relative;
